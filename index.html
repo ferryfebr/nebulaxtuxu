@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NebulaX - Creative Event & Experience Agency</title>
-  <link rel="icon" href="images/logo/logo-title.png" type="image/png" />
+  <link rel="icon" href="images/logo/logo-title.png?v=2" type="image/png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" />
@@ -84,7 +84,7 @@
           <span class="hero-line">Experiences.</span>
         </h1>
         <p>
-          At Nebula X, we believe that every event is a story waiting to be told. From the first concept sketch
+          At Nebula X, we believe that every event is a story waiting to be told. Form the first concept sketch
           to the final moment on stage, we shape how audiences see, feel and remember your event.
         </p>
       </div>
@@ -93,13 +93,16 @@
     <section class="video-section" aria-label="Hero background video">
       <div class="custom-video-wrapper">
         <div class="video-slider-track" id="videoSliderTrack">
-          <video class="section-video" preload="auto" playsinline autoplay>
+          <video class="section-video" preload="auto" playsinline autoplay muted>
+            <source src="videos/intro.mp4" type="video/mp4" />
+          </video>
+          <video class="section-video" preload="auto" playsinline muted>
             <source src="videos/johorsmart2.MOV" type="video/mp4" />
           </video>
-          <video class="section-video" preload="auto" playsinline>
+          <video class="section-video" preload="auto" playsinline muted>
             <source src="videos/jlg2.mp4" type="video/mp4" />
           </video>
-          <video class="section-video" preload="auto" playsinline>
+          <video class="section-video" preload="auto" playsinline muted>
             <source src="videos/jcorp.mp4" type="video/mp4" />
           </video>
         </div>
@@ -114,7 +117,7 @@
 
         <div class="custom-video-controls">
           <button class="play-pause-btn" id="playPauseBtn">
-            <i class="fas fa-play"></i>
+            <i class="fas fa-pause"></i>
           </button>
           <div class="time-display" id="timeDisplay">0:00</div>
           <div class="progress-container">
@@ -123,10 +126,10 @@
           </div>
           <div class="volume-container">
             <button class="volume-btn" id="volumeBtn">
-              <i class="fas fa-volume-up"></i>
+              <i class="fas fa-volume-mute"></i>
             </button>
             <div class="volume-slider-wrapper">
-              <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.01" value="1"
+              <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.01" value="0"
                 orient="vertical">
             </div>
           </div>
@@ -144,19 +147,18 @@
         </div>
         <div class="col-lg-8">
           <p>
-            Nebula Ventures Sdn. Bhd., also known as Nebula X, is a creative
-            content and experience company established in 2025 in Malaysia.
+            Nebula Ventures Sdn. Bhd., also known as Nebula X, is a is a creative 
+            storytelling and brand experience company shaping how ideas, and 
+            stories are brought to life.
           </p>
           <p>
-            At our core, we are a creative content hub which focuses on
-            storytelling, visual impact and audience engagement.<br class="d-none d-lg-block">
-            Complementing this is our ability to integrate event technology
-            seamlessly, ensuring that every idea is not only compelling but
-            also executed with precision and scale.
+            By combining creativity with technology, we transform ideas into 
+            immersive experiences, seamlessly integrating innovative solutions to 
+            ensure every concept is executed with precision and at scale.
           </p>
           <p>
-            In summary, we don't just produce events but we craft experiences
-            that leave lasting impressions.
+            Ultimately, we craft purposeful experiences that captivate audiences 
+            and leave a lasting impression.
           </p>
         </div>
       </div>
@@ -544,7 +546,7 @@
     <div class="container about-content">
       <div class="row align-items-center justify-content-center">
         <div class="col-12 text-center">
-          <h2 class="industri-title pure-fade-in">INDUSTRIES <div style="margin-top: 2px;">WE SERVE</div></h2>
+          <h2 class="industri-title pure-fade-in">THE IMPACT <div style="margin-top: 10px;">WE CREATE</div></h2>
         </div>
       </div>
     </div>
@@ -618,28 +620,48 @@
           <h2 class="industri-title pure-fade-in client-fade-delay client-title-margin">CLIENTS</h2>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12">
-          <!-- Infinite Logo Carousel -->
-          <div class="clients-carousel-wrapper pure-fade-in client-carousel-fade-delay">
-            <div class="clients-carousel-track" id="clientsTrack">
+    </div>
+
+    <!-- Infinite Logo Carousel -->
+    <div class="clients-carousel-wrapper pure-fade-in client-carousel-fade-delay container-fluid px-0">
+      <div class="clients-carousel-track" id="clientsTrack">
               <!-- Slide 1 -->
               <div class="clients-slide">
-                <img src="images/clients/jcorp.png" alt="Client 1" class="client-logo">
-                <img src="images/clients/JLG.png" alt="Client 2" class="client-logo">
-                <img src="images/clients/JSCF2025.png" alt="Client 3" class="client-logo">
-                <img src="images/clients/kpj.png" alt="Client 4" class="client-logo">
-                <img src="images/clients/MIH.png" alt="Client 5" class="client-logo">
-                <img src="images/clients/segi-fresh.png" alt="Client 6" class="client-logo">
-                <img src="images/clients/TMIYC.png" alt="Client 7" class="client-logo">
-                <img src="images/clients/visit-selangor.png" alt="Client 8" class="client-logo">
-
+                <img src="images/clients/atas/Atas-1.png" alt="Client 1" class="client-logo">
+                <img src="images/clients/atas/Atas-2.png" alt="Client 2" class="client-logo">
+                <img src="images/clients/atas/Atas-3.png" alt="Client 3" class="client-logo">
+                <img src="images/clients/atas/Atas-4.png" alt="Client 4" class="client-logo">
+                <img src="images/clients/atas/Atas-5.png" alt="Client 5" class="client-logo">
+                <img src="images/clients/atas/Atas-6.png" alt="Client 6" class="client-logo">
+                <img src="images/clients/atas/Atas-7.png" alt="Client 7" class="client-logo">
+                <img src="images/clients/atas/Atas-8.png" alt="Client 8" class="client-logo">
+                <img src="images/clients/atas/Atas-9.png" alt="Client 9" class="client-logo">
+                <img src="images/clients/atas/Atas-10.png" alt="Client 10" class="client-logo">
+                <img src="images/clients/atas/Atas-11.png" alt="Client 11" class="client-logo">
+              </div>
+            </div>
+            
+            <div class="clients-carousel-track clients-carousel-track-reverse" id="clientsTrackReverse">
+              <!-- Slide 2 (Bottom) -->
+              <div class="clients-slide">
+                <img src="images/clients/bawah/bawah-1.png" alt="Client JCorp" class="client-logo">
+                <img src="images/clients/bawah/bawah-2.png" alt="Client JLG" class="client-logo">
+                <img src="images/clients/bawah/bawah-3.png" alt="Client JSCF" class="client-logo">
+                <img src="images/clients/bawah/bawah-4.png" alt="Client KPJ" class="client-logo">
+                <img src="images/clients/bawah/bawah-5.png" alt="Client MIH" class="client-logo">
+                <img src="images/clients/bawah/bawah-6.png" alt="Client Segi Fresh" class="client-logo">
+                <img src="images/clients/bawah/bawah-7.png" alt="Client TMIYC" class="client-logo">
+                <img src="images/clients/bawah/bawah-8.png" alt="Client Visit Selangor" class="client-logo">
+                <img src="images/clients/bawah/bawah-9.png" alt="Client Visit Selangor" class="client-logo">
+                <img src="images/clients/bawah/bawah-10.png" alt="Client Visit Selangor" class="client-logo">
+                <img src="images/clients/bawah/bawah-11.png" alt="Client Visit Selangor" class="client-logo">
+                <img src="images/clients/bawah/bawah-12.png" alt="Client Visit Selangor" class="client-logo">
+                <img src="images/clients/bawah/bawah-13.png" alt="Client Visit Selangor" class="client-logo">
+                <img src="images/clients/bawah/bawah-14.png" alt="Client Visit Selangor" class="client-logo">
+                <img src="images/clients/bawah/bawah-15.png" alt="Client Visit Selangor" class="client-logo">
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
   </section>
 
   <section id="contact" class="contact-section scroll-section" aria-label="Contact us">
@@ -661,7 +683,7 @@
           <a href="https://wa.me/+60108064014" target="_blank" rel="noreferrer" aria-label="WhatsApp">
             <i class="fab fa-whatsapp"></i>
           </a>
-          <a href="mailto:ask@nebula.my" aria-label="Email">
+          <a href="#" aria-label="Email">
             <i class="fas fa-envelope"></i>
           </a>
         </div>
@@ -698,7 +720,13 @@
           <img src="images/logo/copylogo.png" alt="NebulaX Logo" class="footer-logo" />
           <h4 class="footer-tagline">DISCOVER BEYOND THE LIMITS</h4>
           <p class="footer-desc">
-           Nebula X was established as a dedicated creative and technology arm, focused on conceptualising and delivering high impact content across multiple platforms. Built on a strong foundation in creative development, we seamlessly integrate storytelling with innovative technological solutions to produce immersive, engaging and future ready experiences.
+          Nebula X was established with a clear purpose to fill a growing gap in the event 
+          industry. While many players focus on logistics and operations, the true 
+          differentiator of any event lies in its content and experience.
+          </p>
+          <p class="footer-desc">
+          Recognising this, Nebula X was formed as a dedicated creative arm to 
+          conceptualise and produce high impact content that enhances events of all scales.
           </p>
           <div class="footer-socials" style="display: none;">
             <!-- Social media remvoed per user request -->
@@ -723,7 +751,7 @@
         <div class="footer-col">
           <h3 class="footer-col-title">Email</h3>
           <p>
-            ask@nebula.my
+            
           </p>
         </div>
       </div>
@@ -870,6 +898,17 @@
             // Duplicate 3 times for a seamless loop
             for (let i = 0; i < 3; i++) {
               track.appendChild(slide.cloneNode(true));
+            }
+          }
+        }
+        
+        const trackReverse = document.getElementById("clientsTrackReverse");
+        if (trackReverse) {
+          const slideReverse = trackReverse.querySelector(".clients-slide");
+          if (slideReverse) {
+            // Duplicate 3 times for a seamless loop
+            for (let i = 0; i < 3; i++) {
+              trackReverse.appendChild(slideReverse.cloneNode(true));
             }
           }
         }

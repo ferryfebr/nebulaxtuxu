@@ -544,7 +544,7 @@
             <div class="industry-icon mb-3">
               <img src="images/industri/2.png" alt="3D Animation" class="industry-img">
             </div>
-            <p class="industry-text" style="font-size: 0.9rem; line-height: 1.3;">3D ANIMATIONS &<br>VISUAL CONTENT</p>
+            <p class="industry-text" style="font-size: 0.5rem; line-height: 1.3;">3D ANIMATION &<br>VISUAL CONTENT</p>
             <div class="service-tab-underline"></div>
           </div>
 
@@ -554,7 +554,7 @@
             <div class="industry-icon mb-3">
               <img src="images/industri/3.png" alt="Launch Gimmicks" class="industry-img">
             </div>
-            <p class="industry-text" style="font-size: 0.9rem; line-height: 1.3;">LAUNCH GIMMICKS &<br>SPECIAL EFFECTS</p>
+            <p class="industry-text" style="font-size: 0.5rem; line-height: 1.3;">LAUNCH GIMMICKS &<br>SPECIAL EFFECTS</p>
             <div class="service-tab-underline"></div>
           </div>
 
@@ -564,7 +564,7 @@
             <div class="industry-icon mb-3">
               <img src="images/industri/4.png" alt="Corporate Video" class="industry-img">
             </div>
-            <p class="industry-text" style="font-size: 0.9rem; line-height: 1.3;">CORPORATE VIDEO<br>PRODUCTION</p>
+            <p class="industry-text" style="font-size: 0.5rem; line-height: 1.3;">CORPORATE VIDEO<br>PRODUCTION</p>
             <div class="service-tab-underline"></div>
           </div>
 
@@ -574,7 +574,7 @@
             <div class="industry-icon mb-3">
               <img src="images/industri/5.png" alt="Event Technology" class="industry-img">
             </div>
-            <p class="industry-text" style="font-size: 0.9rem; line-height: 1.3;">EVENT TECHNOLOGY<br>INTEGRATION</p>
+            <p class="industry-text" style="font-size: 0.5rem; line-height: 1.3;">EVENT TECHNOLOGY<br>INTEGRATION</p>
             <div class="service-tab-underline"></div>
           </div>
 
@@ -2143,7 +2143,7 @@
       'corporate-video': {
         label: 'CORPORATE VIDEO\nPRODUCTION',
         videos: [
-          'videos/Corporate Video Production/corporate video.mp4',
+          'videos/Corporate Video Production/corporate video.mp4'
         ]
       },
       'event-tech': {
@@ -2175,6 +2175,19 @@
 
     const GAP = 20; // px gap between cards, must match CSS
 
+    // Flatten SERVICE_DATA into a single array
+    const ALL_VIDEOS = [];
+    Object.keys(SERVICE_DATA).forEach(key => {
+      const data = SERVICE_DATA[key];
+      data.videos.forEach(src => {
+        ALL_VIDEOS.push({
+          src: src,
+          label: data.label,
+          serviceKey: key
+        });
+      });
+    });
+
     /* --------------------------------------------------
        3. Create one card element
     -------------------------------------------------- */
@@ -2186,21 +2199,89 @@
       const vid = document.createElement('video');
       vid.src = src;
       vid.muted = true;
-      vid.loop = true;
+      vid.loop = false; // changed loop to false so ended element can be triggered
       vid.playsInline = true;
       vid.preload = 'metadata';
+      vid.disablePictureInPicture = true;
 
       const labelEl = document.createElement('div');
       labelEl.className = 'svc-card-label';
       labelEl.innerHTML = label.replace('\n', '<br>');
 
-      const wm = document.createElement('div');
+      const wm = document.createElement('img');
       wm.className = 'svc-card-watermark';
-      wm.textContent = 'NEBULAX';
+      
+
+      // Controls setup
+      const controls = document.createElement('div');
+      controls.className = 'svc-controls';
+      controls.innerHTML = `
+        <button class="svc-play-pause"><i class="fas fa-pause"></i></button>
+        <span class="svc-time">0:00</span>
+        <input type="range" class="svc-progress" value="0" min="0" step="0.1">
+        <button class="svc-volume"><i class="fas fa-volume-mute"></i></button>
+      `;
 
       card.appendChild(vid);
+      card.appendChild(controls);
       card.appendChild(labelEl);
       card.appendChild(wm);
+
+      const playPauseBtn = controls.querySelector('.svc-play-pause');
+      const timeDisplay = controls.querySelector('.svc-time');
+      const progressBar = controls.querySelector('.svc-progress');
+      const volumeBtn = controls.querySelector('.svc-volume');
+
+      const formatTime = (time) => {
+        if (!time || isNaN(time)) return "0:00";
+        const m = Math.floor(time / 60);
+        const s = Math.floor(time % 60);
+        return `${m}:${s < 10 ? '0' : ''}${s}`;
+      };
+
+      const togglePlay = (e) => {
+        if (card.classList.contains('center')) {
+          if (e) e.stopPropagation();
+          if (vid.paused) vid.play();
+          else vid.pause();
+        }
+      };
+
+      playPauseBtn.addEventListener('click', togglePlay);
+      vid.addEventListener('click', togglePlay);
+
+      vid.addEventListener('play', () => playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>');
+      vid.addEventListener('pause', () => playPauseBtn.innerHTML = '<i class="fas fa-play"></i>');
+      
+      // Auto-next when video finishes
+      vid.addEventListener('ended', () => {
+        if (card.classList.contains('center')) {
+          stepNext();
+        }
+      });
+
+      vid.addEventListener('loadedmetadata', () => {
+        progressBar.max = vid.duration;
+      });
+
+      vid.addEventListener('timeupdate', () => {
+        timeDisplay.textContent = formatTime(vid.currentTime);
+        progressBar.value = vid.currentTime;
+      });
+
+      progressBar.addEventListener('input', (e) => {
+        e.stopPropagation();
+        vid.currentTime = progressBar.value;
+      });
+      progressBar.addEventListener('mousedown', (e) => e.stopPropagation());
+      progressBar.addEventListener('touchstart', (e) => e.stopPropagation());
+
+      volumeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        vid.muted = !vid.muted;
+        volumeBtn.innerHTML = vid.muted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
+      });
+
       return card;
     }
 
@@ -2209,12 +2290,8 @@
           DOM layout: [clone_last] [v0] [v1] ... [vN] [clone_first]
           domIndex starts at 1 (pointing to real v0)
     -------------------------------------------------- */
-    function buildCarousel(serviceKey) {
-      const data = SERVICE_DATA[serviceKey];
-      if (!data) return;
-
-      const videos = data.videos;
-      totalReal = videos.length;
+    function buildCarousel() {
+      totalReal = ALL_VIDEOS.length;
       realIndex = 0;
       domIndex  = 1;  // real card 0 is at DOM index 1 (after leading clone)
 
@@ -2227,13 +2304,14 @@
       nextBtn.style.display = showNav ? '' : 'none';
 
       // --- Leading clone: clone of last real video ---
-      const leadClone = makeCard(videos[totalReal - 1], data.label, totalReal - 1);
+      const lastVid = ALL_VIDEOS[totalReal - 1];
+      const leadClone = makeCard(lastVid.src, lastVid.label, totalReal - 1);
       leadClone.dataset.clone = 'lead';
       track.appendChild(leadClone);
 
       // --- Real cards ---
-      videos.forEach((src, i) => {
-        const card = makeCard(src, data.label, i);
+      ALL_VIDEOS.forEach((item, i) => {
+        const card = makeCard(item.src, item.label, i);
         // Clicking a side card navigates to it
         card.addEventListener('click', () => {
           const ri = parseInt(card.dataset.realIndex);
@@ -2250,7 +2328,8 @@
       });
 
       // --- Trailing clone: clone of first real video ---
-      const trailClone = makeCard(videos[0], data.label, 0);
+      const firstVid = ALL_VIDEOS[0];
+      const trailClone = makeCard(firstVid.src, firstVid.label, 0);
       trailClone.dataset.clone = 'trail';
       track.appendChild(trailClone);
 
@@ -2297,6 +2376,16 @@
       Array.from(dotsEl.querySelectorAll('.svc-dot')).forEach((d, i) => {
         d.classList.toggle('active', i === realIndex);
       });
+
+      // Update active tab based on realIndex serviceKey
+      const currentVideoObj = ALL_VIDEOS[realIndex];
+      if (currentVideoObj) {
+        currentService = currentVideoObj.serviceKey;
+        tabItems.forEach(t => {
+          t.classList.toggle('active', t.dataset.service === currentService);
+          t.setAttribute('aria-pressed', t.dataset.service === currentService ? 'true' : 'false');
+        });
+      }
 
       // Move track
       track.style.transition = animate
@@ -2356,6 +2445,15 @@
       Array.from(dotsEl.querySelectorAll('.svc-dot')).forEach((d, i) => {
         d.classList.toggle('active', i === realIndex);
       });
+      
+      const prevVideoObj = ALL_VIDEOS[realIndex];
+      if (prevVideoObj) {
+        currentService = prevVideoObj.serviceKey;
+        tabItems.forEach(t => {
+          t.classList.toggle('active', t.dataset.service === currentService);
+          t.setAttribute('aria-pressed', t.dataset.service === currentService ? 'true' : 'false');
+        });
+      }
     }
 
     function stepPrev() {
@@ -2389,6 +2487,15 @@
       Array.from(dotsEl.querySelectorAll('.svc-dot')).forEach((d, i) => {
         d.classList.toggle('active', i === realIndex);
       });
+
+      const prevVideoObj = ALL_VIDEOS[realIndex];
+      if (prevVideoObj) {
+        currentService = prevVideoObj.serviceKey;
+        tabItems.forEach(t => {
+          t.classList.toggle('active', t.dataset.service === currentService);
+          t.setAttribute('aria-pressed', t.dataset.service === currentService ? 'true' : 'false');
+        });
+      }
     }
 
     /* --------------------------------------------------
@@ -2397,35 +2504,48 @@
     nextBtn.addEventListener('click', stepNext);
     prevBtn.addEventListener('click', stepPrev);
 
+    // Spacebar to play/pause center video
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space' || e.key === ' ') {
+        const centerCard = track.querySelector('.svc-card.center');
+        if (centerCard) {
+          // Verify if user is not typing in an input
+          if(e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+            e.preventDefault();
+            const vid = centerCard.querySelector('video');
+            if (vid) {
+              if (vid.paused) vid.play();
+              else vid.pause();
+            }
+          }
+        }
+      }
+    });
+
     /* --------------------------------------------------
-       10. Service tab switching (with fade transition)
+       10. Service tab switching (jump to index)
     -------------------------------------------------- */
     function switchService(serviceKey) {
-      if (serviceKey === currentService || isTransitioning) return;
-      isTransitioning = true;
-      isAnimating     = false;
-
-      // Pause all videos
-      track.querySelectorAll('video').forEach(v => v.pause());
-
-      fadeOverlay.classList.add('fading');
-      setTimeout(() => {
+      if (serviceKey === currentService) return;
+      
+      // Find the first occurrence of this serviceKey
+      const targetIndex = ALL_VIDEOS.findIndex(v => v.serviceKey === serviceKey);
+      if (targetIndex !== -1) {
         currentService = serviceKey;
-        buildCarousel(serviceKey);
-        fadeOverlay.classList.remove('fading');
-        isTransitioning = false;
-      }, 380);
+        
+        // Update tab visuals manually before navigating
+        tabItems.forEach(t => {
+          t.classList.toggle('active', t.dataset.service === currentService);
+          t.setAttribute('aria-pressed', t.dataset.service === currentService ? 'true' : 'false');
+        });
+        
+        goTo(targetIndex, true);
+      }
     }
 
     tabItems.forEach(tab => {
       tab.addEventListener('click', () => {
         const svc = tab.dataset.service;
-        tabItems.forEach(t => {
-          t.classList.remove('active');
-          t.setAttribute('aria-pressed', 'false');
-        });
-        tab.classList.add('active');
-        tab.setAttribute('aria-pressed', 'true');
         switchService(svc);
       });
 
@@ -2452,271 +2572,12 @@
     /* --------------------------------------------------
        12. Init
     -------------------------------------------------- */
-    buildCarousel('3d-animation');
+    buildCarousel();
 
   })();
   </script>
 
-    /* --------------------------------------------------
-       1. DATA — video list per service
-    -------------------------------------------------- */
-    const SERVICE_DATA = {
-      '3d-animation': {
-        label: '3D ANIMATION &\nVISUAL CONTENT',
-        videos: [
-          'videos/3d Animation & Visual Content/3d animation 1.mp4',
-          'videos/3d Animation & Visual Content/3d animation 2.mp4',
-          'videos/3d Animation & Visual Content/3d animation 3.mp4',
-        ]
-      },
-      'launch-gimmick': {
-        label: 'LAUNCH GIMMICKS &\nSPECIAL EFFECTS',
-        videos: [
-          'videos/Launch Gimmick & Special Effect/launch gimmick 1.mp4',
-          'videos/Launch Gimmick & Special Effect/launch gimmick 2.mp4',
-          'videos/Launch Gimmick & Special Effect/launch gimmick 3.mp4',
-        ]
-      },
-      'corporate-video': {
-        label: 'CORPORATE VIDEO\nPRODUCTION',
-        videos: [
-          'videos/Corporate Video Production/corporate video.mp4',
-        ]
-      },
-      'event-tech': {
-        label: 'EVENT TECHNOLOGY\nINTEGRATION',
-        videos: [
-          'videos/Event Technology Integration/Event Technology Integration rev 1.mp4',
-          'videos/Event Technology Integration/Event Technology Integration rev 2.mp4',
-          'videos/Event Technology Integration/Event Technology Integration rev 3.mp4',
-        ]
-      }
-    };
-
-    /* --------------------------------------------------
-       2. DOM references
-    -------------------------------------------------- */
-    const track       = document.getElementById('svcCarouselTrack');
-    const dotsEl      = document.getElementById('svcDots');
-    const prevBtn     = document.getElementById('svcPrevBtn');
-    const nextBtn     = document.getElementById('svcNextBtn');
-    const fadeOverlay = document.getElementById('svcFadeOverlay');
-    const tabItems    = document.querySelectorAll('.service-tab-item');
-
-    let currentService = '3d-animation';
-    let currentIndex   = 0;   // which video is center
-    let isTransitioning = false;
-
-    /* --------------------------------------------------
-       3. Build carousel for a given service
-    -------------------------------------------------- */
-    function buildCarousel(serviceKey) {
-      const data = SERVICE_DATA[serviceKey];
-      if (!data) return;
-
-      const videos = data.videos;
-      currentIndex = 0;
-
-      // Clear
-      track.innerHTML = '';
-      dotsEl.innerHTML = '';
-
-      // Hide prev/next if only 1 video
-      prevBtn.style.display = videos.length > 1 ? '' : 'none';
-      nextBtn.style.display = videos.length > 1 ? '' : 'none';
-
-      // Create cards — for infinite feel, show [prev, center, next]
-      // We render all videos and slide the track
-      videos.forEach((src, i) => {
-        const card = document.createElement('div');
-        card.className = 'svc-card';
-        card.dataset.index = i;
-
-        const vid = document.createElement('video');
-        vid.src = src;
-        vid.muted = true;
-        vid.loop = true;
-        vid.playsInline = true;
-        vid.preload = 'metadata';
-
-        // Label
-        const labelEl = document.createElement('div');
-        labelEl.className = 'svc-card-label';
-        labelEl.innerHTML = data.label.replace('\n', '<br>');
-
-        // Watermark
-        const wm = document.createElement('div');
-        wm.className = 'svc-card-watermark';
-        wm.textContent = 'NEBULAX';
-
-        card.appendChild(vid);
-        card.appendChild(labelEl);
-        card.appendChild(wm);
-
-        // Click side card → navigate to it
-        card.addEventListener('click', () => {
-          if (parseInt(card.dataset.index) !== currentIndex) {
-            goTo(parseInt(card.dataset.index));
-          }
-        });
-
-        track.appendChild(card);
-
-        // Dot
-        const dot = document.createElement('div');
-        dot.className = 'svc-dot';
-        dot.dataset.index = i;
-        dot.addEventListener('click', () => goTo(i));
-        dotsEl.appendChild(dot);
-      });
-
-      applyLayout(false);
-    }
-
-    /* --------------------------------------------------
-       4. Apply layout: center card + side cards + offset
-    -------------------------------------------------- */
-    function applyLayout(animate) {
-      const cards = Array.from(track.querySelectorAll('.svc-card'));
-      const dots  = Array.from(dotsEl.querySelectorAll('.svc-dot'));
-      if (!cards.length) return;
-
-      // Pause all, play center
-      cards.forEach((card, i) => {
-        const vid = card.querySelector('video');
-        const isCenter = i === currentIndex;
-
-        card.className = 'svc-card ' + (isCenter ? 'center' : 'side');
-
-        if (isCenter) {
-          vid.play().catch(() => {});
-        } else {
-          vid.pause();
-        }
-      });
-
-      // Dots
-      dots.forEach((d, i) => {
-        d.classList.toggle('active', i === currentIndex);
-      });
-
-      // Position track so center card is in the middle of the wrapper
-      positionTrack(animate);
-    }
-
-    function positionTrack(animate) {
-      const cards = Array.from(track.querySelectorAll('.svc-card'));
-      if (!cards.length) return;
-
-      const wrapperW = track.parentElement.offsetWidth;
-
-      // Set transition
-      track.style.transition = animate
-        ? 'transform 0.55s cubic-bezier(0.4, 0, 0.2, 1)'
-        : 'none';
-
-      // Wait for layout then calculate
-      requestAnimationFrame(() => {
-        // Sum widths of cards before center + half center width + gaps
-        const gap = 20;
-        let offset = 0;
-        cards.forEach((card, i) => {
-          if (i < currentIndex) {
-            offset += card.offsetWidth + gap;
-          } else if (i === currentIndex) {
-            offset += card.offsetWidth / 2;
-          }
-        });
-        // Center it
-        const translateX = wrapperW / 2 - offset;
-        track.style.transform = `translateX(${translateX}px)`;
-      });
-    }
-
-    /* --------------------------------------------------
-       5. Navigation
-    -------------------------------------------------- */
-    function goTo(idx) {
-      const cards = track.querySelectorAll('.svc-card');
-      if (idx < 0 || idx >= cards.length) return;
-      currentIndex = idx;
-      applyLayout(true);
-    }
-
-    prevBtn.addEventListener('click', () => {
-      const total = track.querySelectorAll('.svc-card').length;
-      goTo((currentIndex - 1 + total) % total);
-    });
-
-    nextBtn.addEventListener('click', () => {
-      const total = track.querySelectorAll('.svc-card').length;
-      goTo((currentIndex + 1) % total);
-    });
-
-    /* --------------------------------------------------
-       6. Service tab switching
-    -------------------------------------------------- */
-    function switchService(serviceKey) {
-      if (serviceKey === currentService || isTransitioning) return;
-      isTransitioning = true;
-
-      // Pause all videos immediately
-      track.querySelectorAll('video').forEach(v => v.pause());
-
-      // Fade out
-      fadeOverlay.classList.add('fading');
-
-      setTimeout(() => {
-        currentService = serviceKey;
-        buildCarousel(serviceKey);
-
-        // Fade back in
-        fadeOverlay.classList.remove('fading');
-        isTransitioning = false;
-      }, 380);
-    }
-
-    tabItems.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const svc = tab.dataset.service;
-
-        // Update active state on tabs
-        tabItems.forEach(t => {
-          t.classList.remove('active');
-          t.setAttribute('aria-pressed', 'false');
-        });
-        tab.classList.add('active');
-        tab.setAttribute('aria-pressed', 'true');
-
-        switchService(svc);
-      });
-
-      // Keyboard support
-      tab.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          tab.click();
-        }
-      });
-    });
-
-    /* --------------------------------------------------
-       7. Reposition on resize
-    -------------------------------------------------- */
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => positionTrack(false), 120);
-    });
-
-    /* --------------------------------------------------
-       8. Init — load 3D Animation on page load
-    -------------------------------------------------- */
-    buildCarousel('3d-animation');
-
-  })();
-  </script>
 
 </body>
 
-</html>
+</html>

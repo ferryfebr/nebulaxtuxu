@@ -57,28 +57,33 @@
 }
 
 /* Perbesar logo industri */
+.industry-icon.mb-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .industry-icon.mb-3 i {
   font-size: 3.3rem;
 }
 
 .industry-text {
   margin-bottom: 0 !important;
+  text-align: center;
 }
 
 @media (min-width: 992px) {
   .industries-row-scroll {
     flex-wrap: nowrap !important;
-    justify-content: space-between !important;
-    gap: 1rem !important;
-    /* Biarkan gap menyesuaikan otomatis dari space-between */
+    justify-content: center !important;
+    gap: 6rem !important;
   }
 
   .industries-row-scroll>div[class^="col-"],
   .industries-row-scroll>[class*="col-"] {
     width: auto;
-    max-width: none;
-    flex: 1;
-    /* Biarkan setiap kolom membentang proporsional ke sisa ruangannya */
+    max-width: 200px;
+    flex: 0 1 auto;
   }
 
   .industry-icon.mb-3 i {
@@ -3045,3 +3050,231 @@ mark.search-highlight.active {
     /* pastikan text bisa diwrap dengan baik */
   }
 }
+
+/* ============================================================
+   SERVICE TAB ICONS (clickable)
+   ============================================================ */
+.service-tab-item {
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  user-select: none;
+}
+
+.service-tab-item:hover {
+  opacity: 0.85;
+  transform: translateY(-3px);
+}
+
+.service-tab-item.active .industry-img {
+  filter: brightness(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.6));
+}
+
+.service-tab-item.active .industry-text {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.service-tab-underline {
+  height: 3px;
+  border-radius: 99px;
+  background: #ffffff;
+  margin: 6px auto 0;
+  width: 0%;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-tab-item.active .service-tab-underline {
+  width: 60%;
+}
+
+/* ============================================================
+   SERVICE VIDEO SECTION
+   ============================================================ */
+.service-video-section {
+  position: relative;
+  background: #0b0519;
+  overflow: hidden;
+  padding: 48px 0 56px;
+}
+
+/* Fade overlay for service switch transition */
+.svc-fade-overlay {
+  position: absolute;
+  inset: 0;
+  background: #0b0519;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 20;
+  transition: opacity 0.35s ease;
+}
+
+.svc-fade-overlay.fading {
+  opacity: 1;
+}
+
+/* Carousel wrapper & track */
+.svc-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.svc-carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  padding: 20px 0;
+}
+
+/* Each video card */
+.svc-card {
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #111;
+  transition:
+    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.45s ease,
+    opacity 0.45s ease;
+}
+
+.svc-card video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Side cards */
+.svc-card.side {
+  width: 300px;
+  height: 190px;
+  opacity: 0.55;
+  transform: scale(0.88);
+  box-shadow: none;
+}
+
+/* Center / active card */
+.svc-card.center {
+  width: 560px;
+  height: 340px;
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.65), 0 0 0 2px rgba(255,255,255,0.12);
+  z-index: 5;
+}
+
+/* Card label overlay */
+.svc-card-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 20px 16px;
+  background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, transparent 100%);
+  font-family: "HS LunaObscura", "Segoe UI", sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+/* Nebulax watermark inside card */
+.svc-card-watermark {
+  position: absolute;
+  bottom: 12px;
+  right: 14px;
+  font-family: "HS LunaObscura", "Segoe UI", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+/* Nav buttons */
+.svc-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.svc-nav-btn:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.7);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.svc-prev { left: 24px; }
+.svc-next { right: 24px; }
+
+/* Dot indicators */
+.svc-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.svc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.svc-dot.active {
+  background: #ffffff;
+  transform: scale(1.35);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 991px) {
+  .svc-card.center {
+    width: 82vw;
+    height: 52vw;
+  }
+
+  .svc-card.side {
+    width: 52vw;
+    height: 33vw;
+  }
+
+  .svc-prev { left: 8px; }
+  .svc-next { right: 8px; }
+}
+
+@media (max-width: 575px) {
+  .svc-card.center {
+    width: 88vw;
+    height: 56vw;
+  }
+
+  .svc-card.side {
+    display: none;
+  }
+}

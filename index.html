@@ -1910,8 +1910,9 @@
         var reduceMotion = window.matchMedia(
           "(prefers-reduced-motion: reduce)",
         ).matches;
-        var SPEED = 0.3;
+        var SPEED = 0.15;
         var MOBILE_BREAKPOINT = 768;
+        var BASE_BG_OFFSET = 0;
         var renderedHeight = 0; // tinggi render modify3.png di mobile
         var ticking = false;
 
@@ -1937,9 +1938,12 @@
           var scrollY =
             window.pageYOffset || document.documentElement.scrollTop;
 
-          if (reduceMotion) return;
+          if (reduceMotion) {
+            document.body.style.backgroundPositionY = BASE_BG_OFFSET + "px";
+            return;
+          }
 
-          var offset = scrollY * SPEED;
+          var offset = scrollY * SPEED + BASE_BG_OFFSET;
 
           document.body.style.backgroundPositionY = offset + "px";
         }
@@ -2537,6 +2541,7 @@
         const nextBtn = document.getElementById("svcNextBtn");
         const fadeOverlay = document.getElementById("svcFadeOverlay");
         const tabItems = document.querySelectorAll(".service-tab-item");
+        const carouselSection = document.getElementById("serviceVideoSection");
 
         let currentService = "3d-animation";
         let realIndex = 0; // 0-based index into actual video list
@@ -2549,11 +2554,21 @@
         const DESKTOP_TRANSITION =
           "transform 0.55s cubic-bezier(0.4, 0, 0.2, 1)";
         const MOBILE_TRANSITION =
-          "transform 0.75s cubic-bezier(0.4, 0, 0.2, 1)";
+          "transform 0.8s cubic-bezier(0.2, 0.9, 0.2, 1)";
         const getCarouselTransition = () =>
           window.matchMedia("(max-width: 991px)").matches
             ? MOBILE_TRANSITION
             : DESKTOP_TRANSITION;
+        const isMobileCarousel = () =>
+          window.matchMedia("(max-width: 991px)").matches;
+        const setMobileAnimating = (isOn) => {
+          if (!carouselSection) return;
+          if (!isMobileCarousel()) {
+            carouselSection.classList.remove("svc-mobile-animating");
+            return;
+          }
+          carouselSection.classList.toggle("svc-mobile-animating", isOn);
+        };
 
         // Flatten SERVICE_DATA into a single array
         const ALL_VIDEOS = [];
@@ -2748,6 +2763,7 @@
          6. Apply layout — update classes, dots, play/pause
       -------------------------------------------------- */
         function applyLayout(animate) {
+          setMobileAnimating(!!animate);
           const cards = Array.from(track.children);
 
           cards.forEach((card, i) => {
@@ -2786,7 +2802,7 @@
           track.style.transition = animate ? getCarouselTransition() : "none";
 
           requestAnimationFrame(() => {
-            track.style.transform = `translateX(${calcTranslateX(domIndex)}px)`;
+            track.style.transform = `translate3d(${calcTranslateX(domIndex)}px, 0, 0)`;
           });
         }
 
@@ -2808,12 +2824,13 @@
         function stepNext() {
           if (isAnimating) return;
           isAnimating = true;
+          setMobileAnimating(true);
 
           // Animate to the next DOM slot
           const nextDom = domIndex + 1;
           track.style.transition = getCarouselTransition();
           requestAnimationFrame(() => {
-            track.style.transform = `translateX(${calcTranslateX(nextDom)}px)`;
+            track.style.transform = `translate3d(${calcTranslateX(nextDom)}px, 0, 0)`;
           });
 
           // After animation ends, update state
@@ -2858,11 +2875,12 @@
         function stepPrev() {
           if (isAnimating) return;
           isAnimating = true;
+          setMobileAnimating(true);
 
           const prevDom = domIndex - 1;
           track.style.transition = getCarouselTransition();
           requestAnimationFrame(() => {
-            track.style.transform = `translateX(${calcTranslateX(prevDom)}px)`;
+            track.style.transform = `translate3d(${calcTranslateX(prevDom)}px, 0, 0)`;
           });
 
           track.addEventListener("transitionend", function handler() {
@@ -2908,6 +2926,13 @@
       -------------------------------------------------- */
         nextBtn.addEventListener("click", stepNext);
         prevBtn.addEventListener("click", stepPrev);
+
+        track.addEventListener("transitionend", (event) => {
+          if (event.target !== track || event.propertyName !== "transform") {
+            return;
+          }
+          setMobileAnimating(false);
+        });
 
         // Spacebar to play/pause center video
         document.addEventListener("keydown", (e) => {
@@ -2980,8 +3005,9 @@
         window.addEventListener("resize", () => {
           clearTimeout(resizeTimer);
           resizeTimer = setTimeout(() => {
+            setMobileAnimating(false);
             track.style.transition = "none";
-            track.style.transform = `translateX(${calcTranslateX(domIndex)}px)`;
+            track.style.transform = `translate3d(${calcTranslateX(domIndex)}px, 0, 0)`;
           }, 120);
         });
 

@@ -1,174 +1,245 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NebulaX - Creative Event & Experience Agency</title>
+    <link rel="icon" href="images/logo/logo-title.png?v=2" type="image/png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NebulaX - Creative Event & Experience Agency</title>
-  <link rel="icon" href="images/logo/logo-title.png?v=2" type="image/png" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
-  <link href="style.css" rel="stylesheet" />
-</head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a class="navbar-brand d-flex align-items-center" href="#home">
+          <img
+            src="images/logo/logo.png"
+            alt="NebulaX Logo"
+            class="brand-logo"
+          />
+        </a>
 
-<body>
-  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-    <div class="container d-flex align-items-center justify-content-between">
-      <a class="navbar-brand d-flex align-items-center" href="#home">
-        <img src="images/logo/logo.png" alt="NebulaX Logo" class="brand-logo" />
-      </a>
-
-      <div class="d-flex align-items-center d-lg-none gap-2">
-        <button class="btn btn-search px-2" aria-label="Search" id="searchBtnMobile">
-          <i class="fas fa-search"></i>
-        </button>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-
-      <div class="collapse navbar-collapse justify-content-end shift-right-20" id="navbarNav">
-        <ul class="navbar-nav align-items-center">
-          <li class="nav-item">
-            <a class="nav-link nav-pill active" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#clients">Clients</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contacts</a>
-          </li>
-        </ul>
-      </div>
-      <div class="d-none d-lg-flex shift-right-20">
-        <button class="btn btn-search px-3" aria-label="Search" id="searchBtn">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Ctrl+F Style Search Box -->
-  <div id="ctrlFBox" class="ctrl-f-box">
-    <i class="fas fa-search search-icon-mini"></i>
-    <input type="text" id="ctrlFInput" placeholder="Find in page..." autocomplete="off">
-    <div class="ctrl-f-actions">
-      <button id="ctrlFPrev" title="Find Previous"><i class="fas fa-angle-up"></i></button>
-      <button id="ctrlFNext" title="Find Next"><i class="fas fa-angle-down"></i></button>
-      <div class="ctrl-f-divider"></div>
-      <button id="ctrlFClose" title="Close"><i class="fas fa-times"></i></button>
-    </div>
-  </div>
-
-  <div id="home" class="hero-parallax-wrapper">
-    <section class="hero">
-      <div class="hero-bg">
-        <div class="hero-bg__base"></div>
-
-      </div>
-      <div class="container-fluid hero-content hero-content-left" data-parallax-speed="0.50">
-        <h1>
-          <span class="hero-line">We Transform</span>
-          <span class="hero-line">Creativity</span>
-          <span class="hero-line">into Immersive</span>
-          <span class="hero-line">Experiences</span>
-        </h1>
-        <p>
-          At Nebula X, we believe that every event is a story waiting to be told. Form the first concept sketch
-          to the final moment on stage, we shape how audiences see, feel and remember your event.
-        </p>
-      </div>
-    </section>
-
-    <section class="video-section" aria-label="Hero background video">
-      <div class="custom-video-wrapper">
-        <div class="video-slider-track" id="videoSliderTrack">
-          <video class="section-video" preload="auto" playsinline autoplay muted>
-            <source src="videos/intro.mp4" type="video/mp4" />
-          </video>
-          <video class="section-video" preload="auto" playsinline muted>
-            <source src="videos/johorsmart2.MOV" type="video/mp4" />
-          </video>
-          <video class="section-video" preload="auto" playsinline muted>
-            <source src="videos/jlg2.mp4" type="video/mp4" />
-          </video>
-          <video class="section-video" preload="auto" playsinline muted>
-            <source src="videos/jcorp.mp4" type="video/mp4" />
-          </video>
+        <div class="d-flex align-items-center d-lg-none gap-2">
+          <button
+            class="btn btn-search px-2"
+            aria-label="Search"
+            id="searchBtnMobile"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
 
-        <!-- Video Navigation Buttons -->
-        <button class="video-nav-btn prev-video-btn" id="prevVideoBtn" aria-label="Previous Video">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="video-nav-btn next-video-btn" id="nextVideoBtn" aria-label="Next Video">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-
-        <div class="custom-video-controls">
-          <button class="play-pause-btn" id="playPauseBtn">
-            <i class="fas fa-pause"></i>
+        <div
+          class="collapse navbar-collapse justify-content-end shift-right-20"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+              <a class="nav-link nav-pill active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <!-- <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#clients">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contacts</a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-none d-lg-flex shift-right-20">
+          <button
+            class="btn btn-search px-3"
+            aria-label="Search"
+            id="searchBtn"
+          >
+            <i class="fas fa-search"></i>
           </button>
-          <div class="time-display" id="timeDisplay">0:00</div>
-          <div class="progress-container">
-            <input type="range" class="progress-bar-slider" id="progressSlider" min="0" max="100" value="0" step="0.1">
-            <div class="progress-bar-fill" id="progressBarFill"></div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Ctrl+F Style Search Box -->
+    <div id="ctrlFBox" class="ctrl-f-box">
+      <i class="fas fa-search search-icon-mini"></i>
+      <input
+        type="text"
+        id="ctrlFInput"
+        placeholder="Find in page..."
+        autocomplete="off"
+      />
+      <div class="ctrl-f-actions">
+        <button id="ctrlFPrev" title="Find Previous">
+          <i class="fas fa-angle-up"></i>
+        </button>
+        <button id="ctrlFNext" title="Find Next">
+          <i class="fas fa-angle-down"></i>
+        </button>
+        <div class="ctrl-f-divider"></div>
+        <button id="ctrlFClose" title="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="home" class="hero-parallax-wrapper">
+      <section class="hero">
+        <div class="hero-bg">
+          <div class="hero-bg__base"></div>
+        </div>
+        <div
+          class="container-fluid hero-content hero-content-left"
+          data-parallax-speed="0.50"
+        >
+          <h1>
+            <span class="hero-line">We Transform</span>
+            <span class="hero-line">Creativity</span>
+            <span class="hero-line">into Immersive</span>
+            <span class="hero-line">Experiences</span>
+          </h1>
+          <p>
+            At Nebula X, we believe that every event is a story waiting to be
+            told. Form the first concept sketch to the final moment on stage, we
+            shape how audiences see, feel and remember your event.
+          </p>
+        </div>
+      </section>
+
+      <section class="video-section" aria-label="Hero background video">
+        <div class="custom-video-wrapper">
+          <div class="video-slider-track" id="videoSliderTrack">
+            <video
+              class="section-video"
+              preload="auto"
+              playsinline
+              autoplay
+              muted
+            >
+              <source src="videos/intro.mp4" type="video/mp4" />
+            </video>
+            <video class="section-video" preload="auto" playsinline muted>
+              <source src="videos/johorsmart2.MOV" type="video/mp4" />
+            </video>
+            <video class="section-video" preload="auto" playsinline muted>
+              <source src="videos/jlg2.mp4" type="video/mp4" />
+            </video>
+            <video class="section-video" preload="auto" playsinline muted>
+              <source src="videos/jcorp.mp4" type="video/mp4" />
+            </video>
           </div>
-          <div class="volume-container">
-            <button class="volume-btn" id="volumeBtn">
-              <i class="fas fa-volume-mute"></i>
+
+          <!-- Video Navigation Buttons -->
+          <button
+            class="video-nav-btn prev-video-btn"
+            id="prevVideoBtn"
+            aria-label="Previous Video"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button
+            class="video-nav-btn next-video-btn"
+            id="nextVideoBtn"
+            aria-label="Next Video"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+          <div class="custom-video-controls">
+            <button class="play-pause-btn" id="playPauseBtn">
+              <i class="fas fa-pause"></i>
             </button>
-            <div class="volume-slider-wrapper">
-              <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.01" value="0"
-                orient="vertical">
+            <div class="time-display" id="timeDisplay">0:00</div>
+            <div class="progress-container">
+              <input
+                type="range"
+                class="progress-bar-slider"
+                id="progressSlider"
+                min="0"
+                max="100"
+                value="0"
+                step="0.1"
+              />
+              <div class="progress-bar-fill" id="progressBarFill"></div>
+            </div>
+            <div class="volume-container">
+              <button class="volume-btn" id="volumeBtn">
+                <i class="fas fa-volume-mute"></i>
+              </button>
+              <div class="volume-slider-wrapper">
+                <input
+                  type="range"
+                  class="volume-slider"
+                  id="volumeSlider"
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  value="0"
+                  orient="vertical"
+                />
+              </div>
             </div>
           </div>
         </div>
+      </section>
+    </div>
+
+    <section id="about" class="about-section scroll-section">
+      <div class="container about-content scroll-fade">
+        <div class="row align-items-start">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h2 class="about-title">
+              ABOUT<span class="d-lg-none"> US</span>
+              <div class="d-none d-lg-block" style="margin-top: 15px">US</div>
+            </h2>
+          </div>
+          <div class="col-lg-8">
+            <p>
+              Nebula Ventures Sdn. Bhd., also known as Nebula X, is a is a
+              creative storytelling and brand experience company shaping how
+              ideas, and stories are brought to life.
+            </p>
+            <p>
+              By combining creativity with technology, we transform ideas into
+              immersive experiences, seamlessly integrating innovative solutions
+              to ensure every concept is executed with precision and at scale.
+            </p>
+            <p>
+              Ultimately, we craft purposeful experiences that captivate
+              audiences and leave a lasting impression.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
-  </div>
 
-  <section id="about" class="about-section scroll-section">
-
-    <div class="container about-content scroll-fade">
-      <div class="row align-items-start">
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <h2 class="about-title">ABOUT<span class="d-lg-none"> US</span>
-            <div class="d-none d-lg-block" style="margin-top: 15px;">US</div>
-          </h2>
-        </div>
-        <div class="col-lg-8">
-          <p>
-            Nebula Ventures Sdn. Bhd., also known as Nebula X, is a is a creative
-            storytelling and brand experience company shaping how ideas, and
-            stories are brought to life.
-          </p>
-          <p>
-            By combining creativity with technology, we transform ideas into
-            immersive experiences, seamlessly integrating innovative solutions to
-            ensure every concept is executed with precision and at scale.
-          </p>
-          <p>
-            Ultimately, we craft purposeful experiences that captivate audiences
-            and leave a lasting impression.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Agency Services Header (COMMENTED OUT) -->
-  <!-- 
+    <!-- Agency Services Header (COMMENTED OUT) -->
+    <!-- 
   <section id="projects" class="agency-header" aria-label="Agency Services Header">
     <div class="agency-header-inner">
       <div class="agency-col">
@@ -199,7 +270,7 @@
     </div>
   </section>
   -->
-  <!-- Projects Showcase (COMMENTED OUT)
+    <!-- Projects Showcase (COMMENTED OUT)
   <section id="projects-showcase" class="projects-showcase" aria-label="Our projects">
     <div class="projects-frame">
       <button class="projects-nav projects-prev" type="button" aria-label="Project sebelumnya">
@@ -238,847 +309,1097 @@
   </section>
   -->
 
-  <!-- Data source for dynamic projects per category (HIDDEN - display none) -->
-  <div id="projects-data" style="display: none;">
-    <!-- SERVICE 1 -->
-    <div data-category="creative-concept-experience-design">
-      <!-- 1 -->
-      <a class="project-card">
-        <img src="images/services/creative/1.jpg" alt="Sample 1" />
-        <span class="project-card-info">
-          <span class="project-card-title">Creative Concept & Experience Design</span>
-        </span>
-      </a>
-      <!-- 2 -->
-      <a class="project-card">
-        <img src="images/services/creative/2.JPG" alt="Sample 2" />
-        <span class="project-card-info">
-          <span class="project-card-title">Creative Concept & Experience Design</span>
-        </span>
-      </a>
-      <!-- 3 -->
-      <a class="project-card">
-        <img src="images/services/creative/3.png" alt="Sample 3" />
-        <span class="project-card-info">
-          <span class="project-card-title">Creative Concept & Experience Design</span>
-        </span>
-      </a>
-      <!-- 4 -->
-      <a class="project-card">
-        <img src="images/services/creative/4.jpg" alt="Sample 4" />
-        <span class="project-card-info">
-          <span class="project-card-title">Creative Concept & Experience Design</span>
-        </span>
-      </a>
-      <!-- 5 -->
-      <a class="project-card">
-        <img src="images/services/creative/5.png" alt="Sample 5" />
-        <span class="project-card-info">
-          <span class="project-card-title">Creative Concept & Experience Design</span>
-        </span>
-      </a>
-      <!-- 6 -->
-      <a class="project-card">
-        <img src="images/services/creative/6.jpg" alt="Sample 6" />
-        <span class="project-card-info">
-          <span class="project-card-title">Creative Concept & Experience Design</span>
-        </span>
-      </a>
-    </div>
-
-    <!-- SERVICE 2 -->
-    <div data-category="corporate-video-production">
-      <!-- 1 -->
-      <a class="project-card">
-        <img src="images/services/corporate/1.jpg" alt="Sample 1" />
-        <span class="project-card-info">
-          <span class="project-card-title">Corporate Video Production</span>
-        </span>
-      </a>
-      <!-- 2 -->
-      <a class="project-card">
-        <img src="images/services/corporate/2.jpg" alt="Sample 2" />
-        <span class="project-card-info">
-          <span class="project-card-title">Corporate Video Production</span>
-        </span>
-      </a>
-      <!-- 3 -->
-      <a class="project-card">
-        <img src="images/services/corporate/3.jpg" alt="Sample 3" />
-        <span class="project-card-info">
-          <span class="project-card-title">Corporate Video Production</span>
-        </span>
-      </a>
-      <!-- 4 -->
-      <a class="project-card">
-        <img src="images/services/corporate/4.jpg" alt="Sample 4" />
-        <span class="project-card-info">
-          <span class="project-card-title">Corporate Video Production</span>
-        </span>
-      </a>
-      <!-- 5 -->
-      <a class="project-card">
-        <img src="images/services/corporate/5.jpg" alt="Sample 5" />
-        <span class="project-card-info">
-          <span class="project-card-title">Corporate Video Production</span>
-        </span>
-      </a>
-      <!-- 6 -->
-      <a class="project-card">
-        <img src="images/services/corporate/6.jpg" alt="Sample 6" />
-        <span class="project-card-info">
-          <span class="project-card-title">Corporate Video Production</span>
-        </span>
-      </a>
-    </div>
-
-    <!-- SERVICE 3 -->
-    <div data-category="3d-animation-visual-content">
-      <!-- 1 -->
-      <a class="project-card">
-        <img src="images/services/3d/1.jpg" alt="Sample 1" />
-        <span class="project-card-info">
-          <span class="project-card-title">3D Animation &amp;<br class="d-none d-lg-block"> Visual Content</span>
-        </span>
-      </a>
-      <!-- 2 -->
-      <a class="project-card">
-        <img src="images/services/3d/2.jpg" alt="Sample 2" />
-        <span class="project-card-info">
-          <span class="project-card-title">3D Animation &amp;<br class="d-none d-lg-block"> Visual Content</span>
-        </span>
-      </a>
-      <!-- 3 -->
-      <a class="project-card">
-        <img src="images/services/3d/3.jpg" alt="Sample 3" />
-        <span class="project-card-info">
-          <span class="project-card-title">3D Animation &amp;<br class="d-none d-lg-block"> Visual Content</span>
-        </span>
-      </a>
-      <!-- 4 -->
-      <a class="project-card">
-        <img src="images/services/3d/4.jpg" alt="Sample 4" />
-        <span class="project-card-info">
-          <span class="project-card-title">3D Animation &amp;<br class="d-none d-lg-block"> Visual Content</span>
-        </span>
-      </a>
-      <!-- 5 -->
-      <a class="project-card">
-        <img src="images/services/3d/5.JPG" alt="Sample 5" />
-        <span class="project-card-info">
-          <span class="project-card-title">3D Animation &amp;<br class="d-none d-lg-block"> Visual Content</span>
-        </span>
-      </a>
-      <!-- 6 -->
-      <a class="project-card">
-        <img src="images/services/3d/6.png" alt="Sample 6" />
-        <span class="project-card-info">
-          <span class="project-card-title">3D Animation &amp;<br class="d-none d-lg-block"> Visual Content</span>
-        </span>
-      </a>
-    </div>
-
-    <!-- SERVICE 4 -->
-    <div data-category="event-content-production">
-      <!-- 1 -->
-      <a class="project-card">
-        <img src="images/services/event-con/1.png" alt="Sample 1" />
-        <span class="project-card-info">
-          <span class="project-card-title">Event Content Production</span>
-        </span>
-      </a>
-      <!-- 2 -->
-      <a class="project-card">
-        <img src="images/services/event-con/2.JPG" alt="Sample 2" />
-        <span class="project-card-info">
-          <span class="project-card-title">Event Content Production</span>
-        </span>
-      </a>
-      <!-- 3 -->
-      <a class="project-card">
-        <img src="images/services/event-con/3.jpg" alt="Sample 3" />
-        <span class="project-card-info">
-          <span class="project-card-title">Event Content Production</span>
-        </span>
-      </a>
-      <!-- 4 -->
-      <a class="project-card">
-        <img src="images/services/event-con/4.jpg" alt="Sample 4" />
-        <span class="project-card-info">
-          <span class="project-card-title">Event Content Production</span>
-        </span>
-      </a>
-      <!-- 5 -->
-      <a class="project-card">
-        <img src="images/services/event-con/5.JPG" alt="Sample 5" />
-        <span class="project-card-info">
-          <span class="project-card-title">Event Content Production</span>
-        </span>
-      </a>
-      <!-- 6 -->
-      <a class="project-card">
-        <img src="images/services/event-con/6.JPG" alt="Sample 6" />
-        <span class="project-card-info">
-          <span class="project-card-title">Event Content Production</span>
-        </span>
-      </a>
-    </div>
-
-    <!-- SERVICE 5 -->
-    <div data-category="launch-gimmicks-special-effects">
-      <!-- 1 -->
-      <a class="project-card">
-        <img src="images/services/launch/1.jpg" alt="Sample 1" />
-        <span class="project-card-info">
-          <span class="project-card-title">Launch Gimmicks & Special Effects</span>
-        </span>
-      </a>
-      <!-- 2 -->
-      <a class="project-card">
-        <img src="images/services/launch/2.jpg" alt="Sample 2" />
-        <span class="project-card-info">
-          <span class="project-card-title">Launch Gimmicks & Special Effects</span>
-        </span>
-      </a>
-      <!-- 3 -->
-      <a class="project-card">
-        <img src="images/services/launch/3.jpg" alt="Sample 3" />
-        <span class="project-card-info">
-          <span class="project-card-title">Launch Gimmicks & Special Effects</span>
-        </span>
-      </a>
-      <!-- 4 -->
-      <a class="project-card">
-        <img src="images/services/launch/4.jpg" alt="Sample 4" />
-        <span class="project-card-info">
-          <span class="project-card-title">Launch Gimmicks & Special Effects</span>
-        </span>
-      </a>
-      <!-- 5 -->
-      <a class="project-card">
-        <img src="images/services/launch/5.jpg" alt="Sample 5" />
-        <span class="project-card-info">
-          <span class="project-card-title">Launch Gimmicks & Special Effects</span>
-        </span>
-      </a>
-      <!-- 6 -->
-      <a class="project-card">
-        <img src="images/services/launch/6.jpg" alt="Sample 6" />
-        <span class="project-card-info">
-          <span class="project-card-title">Launch Gimmicks & Special Effects</span>
-        </span>
-      </a>
-    </div>
-
-    <!-- SERVICE 6 -->
-    <div data-category="event-technology-integration">
-      <!-- 1 -->
-      <a class="project-card">
-        <img src="images/services/event-tech/1.JPG" alt="Sample 1" />
-        <span class="project-card-info">
-          <span class="project-card-title">Event Technology Integration</span>
-        </span>
-      </a>
-      <!-- 2 -->
-      <a class="project-card">
-        <img src="images/services/event-tech/2.JPG" alt="Sample 2" />
-        <span class="project-card-info">
-          <span class="project-card-title">Event Technology Integration</span>
-        </span>
-      </a>
-      <!-- 3 -->
-      <a class="project-card">
-        <img src="images/services/event-tech/3.png" alt="Sample 3" />
-        <span class="project-card-info">
-          <span class="project-card-title">Event Technology Integration</span>
-        </span>
-      </a>
-      <!-- 4 -->
-      <a class="project-card">
-        <img src="images/services/event-tech/4.JPG" alt="Sample 4" />
-        <span class="project-card-info">
-          <span class="project-card-title">Event Technology Integration</span>
-        </span>
-      </a>
-      <!-- 5 -->
-      <a class="project-card">
-        <img src="images/services/event-tech/5.JPG" alt="Sample 5" />
-        <span class="project-card-info">
-          <span class="project-card-title">Event Technology Integration</span>
-        </span>
-      </a>
-      <!-- 6 -->
-      <a class="project-card">
-        <img src="images/services/event-tech/6.jpg" alt="Sample 6" />
-        <span class="project-card-info">
-          <span class="project-card-title">Event Technology Integration</span>
-        </span>
-      </a>
-    </div>
-  </div>
-
-  <!-- our service -->
-
-
-
-  <!-- industries we serve -->
-
-  <section id="services" class="about-section scroll-section" aria-label="Industries we serve">
-    <div class="container about-content">
-      <div class="row align-items-center justify-content-center">
-        <div class="col-12 text-center">
-          <h2 class="industri-title pure-fade-in">THE IMPACT <div style="margin-top: 10px;">WE CREATE</div>
-          </h2>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid mt-3 mt-md-5 industries-gradient-container"
-      style="background: linear-gradient(270deg, #4d18ab 0%, #5623b8 28%, #5f47c9 60%, #6b8be1 84%, #b0d5ff 100%); padding: 1.1rem 0; min-height: 200px; display: flex; align-items: center;">
-      <div class="container">
-        <div class="row text-center justify-content-center industries-row-scroll">
-
-          <!-- SERVICE 1: 3D Animation -->
-          <div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0 pure-fade-in icon-fade-delay service-tab-item active"
-            data-service="3d-animation" role="button" tabindex="0" aria-pressed="true">
-            <div class="industry-icon mb-3">
-              <img src="images/industri/2.png" alt="3D Animation" class="industry-img">
-            </div>
-            <p class="industry-text" style="font-size: 0.5rem; line-height: 1.3;">3D ANIMATION &<br>VISUAL CONTENT</p>
-            <div class="service-tab-underline"></div>
-          </div>
-
-          <!-- SERVICE 2: Launch Gimmicks -->
-          <div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0 pure-fade-in icon-fade-delay service-tab-item"
-            data-service="launch-gimmick" role="button" tabindex="0" aria-pressed="false">
-            <div class="industry-icon mb-3">
-              <img src="images/industri/3.png" alt="Launch Gimmicks" class="industry-img">
-            </div>
-            <p class="industry-text" style="font-size: 0.5rem; line-height: 1.3;">LAUNCH GIMMICKS &<br>SPECIAL EFFECTS</p>
-            <div class="service-tab-underline"></div>
-          </div>
-
-          <!-- SERVICE 3: Corporate Video -->
-          <div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0 pure-fade-in icon-fade-delay service-tab-item"
-            data-service="corporate-video" role="button" tabindex="0" aria-pressed="false">
-            <div class="industry-icon mb-3">
-              <img src="images/industri/4.png" alt="Corporate Video" class="industry-img">
-            </div>
-            <p class="industry-text" style="font-size: 0.5rem; line-height: 1.3;">CORPORATE VIDEO<br>PRODUCTION</p>
-            <div class="service-tab-underline"></div>
-          </div>
-
-          <!-- SERVICE 4: Event Technology -->
-          <div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0 pure-fade-in icon-fade-delay service-tab-item"
-            data-service="event-tech" role="button" tabindex="0" aria-pressed="false">
-            <div class="industry-icon mb-3">
-              <img src="images/industri/5.png" alt="Event Technology" class="industry-img">
-            </div>
-            <p class="industry-text" style="font-size: 0.5rem; line-height: 1.3;">EVENT TECHNOLOGY<br>INTEGRATION</p>
-            <div class="service-tab-underline"></div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- ===== SERVICE VIDEO CAROUSEL ===== -->
-    <div class="service-video-section" id="serviceVideoSection">
-
-      <!-- Fade overlay for transition -->
-      <div class="svc-fade-overlay" id="svcFadeOverlay"></div>
-
-      <!-- Carousel track -->
-      <div class="svc-carousel-wrapper" id="svcCarouselWrapper">
-        <div class="svc-carousel-track" id="svcCarouselTrack">
-          <!-- Cards injected by JS -->
-        </div>
-      </div>
-
-      <!-- Prev / Next buttons -->
-      <button class="svc-nav-btn svc-prev" id="svcPrevBtn" aria-label="Previous video">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-      <button class="svc-nav-btn svc-next" id="svcNextBtn" aria-label="Next video">
-        <i class="fas fa-chevron-right"></i>
-      </button>
-
-      <!-- Dot indicators -->
-      <div class="svc-dots" id="svcDots"></div>
-
-    </div>
-
-  </section>
-
-
-  <section id="clients" class="about-section scroll-section" aria-label="Services/Clients title">
-    <div class="container about-content">
-      <div class="row align-items-center justify-content-center">
-        <div class="col-12 text-center">
-          <h2 class="industri-title pure-fade-in client-fade-delay client-title-margin">CLIENTS</h2>
-        </div>
-      </div>
-    </div>
-
-    <!-- Infinite Logo Carousel -->
-    <div class="clients-carousel-wrapper pure-fade-in client-carousel-fade-delay container-fluid px-0">
-      <div class="clients-carousel-track" id="clientsTrack">
-        <!-- Slide 1 -->
-        <div class="clients-slide">
-          <img src="images/clients/atas/Atas-1.png" alt="Client 1" class="client-logo">
-          <img src="images/clients/atas/Atas-2.png" alt="Client 2" class="client-logo">
-          <img src="images/clients/atas/Atas-3.png" alt="Client 3" class="client-logo">
-          <img src="images/clients/atas/Atas-4.png" alt="Client 4" class="client-logo">
-          <img src="images/clients/atas/Atas-5.png" alt="Client 5" class="client-logo">
-          <img src="images/clients/atas/Atas-6.png" alt="Client 6" class="client-logo">
-          <img src="images/clients/atas/Atas-7.png" alt="Client 7" class="client-logo">
-          <img src="images/clients/atas/Atas-8.png" alt="Client 8" class="client-logo">
-          <img src="images/clients/atas/Atas-9.png" alt="Client 9" class="client-logo">
-          <img src="images/clients/atas/Atas-10.png" alt="Client 10" class="client-logo">
-          <img src="images/clients/atas/Atas-11.png" alt="Client 11" class="client-logo">
-        </div>
-      </div>
-
-      <div class="clients-carousel-track clients-carousel-track-reverse" id="clientsTrackReverse">
-        <!-- Slide 2 (Bottom) -->
-        <div class="clients-slide">
-          <img src="images/clients/bawah/bawah-1.png" alt="Client JCorp" class="client-logo">
-          <img src="images/clients/bawah/bawah-2.png" alt="Client JLG" class="client-logo">
-          <img src="images/clients/bawah/bawah-3.png" alt="Client JSCF" class="client-logo">
-          <img src="images/clients/bawah/bawah-4.png" alt="Client KPJ" class="client-logo">
-          <img src="images/clients/bawah/bawah-5.png" alt="Client MIH" class="client-logo">
-          <img src="images/clients/bawah/bawah-6.png" alt="Client Segi Fresh" class="client-logo">
-          <img src="images/clients/bawah/bawah-7.png" alt="Client TMIYC" class="client-logo">
-          <img src="images/clients/bawah/bawah-8.png" alt="Client Visit Selangor" class="client-logo">
-          <img src="images/clients/bawah/bawah-9.png" alt="Client Visit Selangor" class="client-logo">
-          <img src="images/clients/bawah/bawah-10.png" alt="Client Visit Selangor" class="client-logo">
-          <img src="images/clients/bawah/bawah-11.png" alt="Client Visit Selangor" class="client-logo">
-          <img src="images/clients/bawah/bawah-12.png" alt="Client Visit Selangor" class="client-logo">
-          <img src="images/clients/bawah/bawah-13.png" alt="Client Visit Selangor" class="client-logo">
-          <img src="images/clients/bawah/bawah-14.png" alt="Client Visit Selangor" class="client-logo">
-          <img src="images/clients/bawah/bawah-15.png" alt="Client Visit Selangor" class="client-logo">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact-section scroll-section" aria-label="Contact us">
-    <div class="container contact-content scroll-fade">
-      <div class="contact-card-redesign">
-        <h2 class="contact-title text-center">
-          WE'RE ALWAYS READY TO HELP YOU AND<br />
-          ANSWER YOUR QUESTIONS
-        </h2>
-
-        <div class="contact-click-here">
-          CLICK <span class="text-gradient-pink">HERE</span>
-          <span class="animated-arrows">
-            <i class="fa-solid fa-angles-down"></i>
+    <!-- Data source for dynamic projects per category (HIDDEN - display none) -->
+    <div id="projects-data" style="display: none">
+      <!-- SERVICE 1 -->
+      <div data-category="creative-concept-experience-design">
+        <!-- 1 -->
+        <a class="project-card">
+          <img src="images/services/creative/1.jpg" alt="Sample 1" />
+          <span class="project-card-info">
+            <span class="project-card-title"
+              >Creative Concept & Experience Design</span
+            >
           </span>
-        </div>
+        </a>
+        <!-- 2 -->
+        <a class="project-card">
+          <img src="images/services/creative/2.JPG" alt="Sample 2" />
+          <span class="project-card-info">
+            <span class="project-card-title"
+              >Creative Concept & Experience Design</span
+            >
+          </span>
+        </a>
+        <!-- 3 -->
+        <a class="project-card">
+          <img src="images/services/creative/3.png" alt="Sample 3" />
+          <span class="project-card-info">
+            <span class="project-card-title"
+              >Creative Concept & Experience Design</span
+            >
+          </span>
+        </a>
+        <!-- 4 -->
+        <a class="project-card">
+          <img src="images/services/creative/4.jpg" alt="Sample 4" />
+          <span class="project-card-info">
+            <span class="project-card-title"
+              >Creative Concept & Experience Design</span
+            >
+          </span>
+        </a>
+        <!-- 5 -->
+        <a class="project-card">
+          <img src="images/services/creative/5.png" alt="Sample 5" />
+          <span class="project-card-info">
+            <span class="project-card-title"
+              >Creative Concept & Experience Design</span
+            >
+          </span>
+        </a>
+        <!-- 6 -->
+        <a class="project-card">
+          <img src="images/services/creative/6.jpg" alt="Sample 6" />
+          <span class="project-card-info">
+            <span class="project-card-title"
+              >Creative Concept & Experience Design</span
+            >
+          </span>
+        </a>
+      </div>
 
-        <div class="contact-big-icons">
-          <a href="https://wa.me/+60108064014" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-          <a href="#" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </div>
+      <!-- SERVICE 2 -->
+      <div data-category="corporate-video-production">
+        <!-- 1 -->
+        <a class="project-card">
+          <img src="images/services/corporate/1.jpg" alt="Sample 1" />
+          <span class="project-card-info">
+            <span class="project-card-title">Corporate Video Production</span>
+          </span>
+        </a>
+        <!-- 2 -->
+        <a class="project-card">
+          <img src="images/services/corporate/2.jpg" alt="Sample 2" />
+          <span class="project-card-info">
+            <span class="project-card-title">Corporate Video Production</span>
+          </span>
+        </a>
+        <!-- 3 -->
+        <a class="project-card">
+          <img src="images/services/corporate/3.jpg" alt="Sample 3" />
+          <span class="project-card-info">
+            <span class="project-card-title">Corporate Video Production</span>
+          </span>
+        </a>
+        <!-- 4 -->
+        <a class="project-card">
+          <img src="images/services/corporate/4.jpg" alt="Sample 4" />
+          <span class="project-card-info">
+            <span class="project-card-title">Corporate Video Production</span>
+          </span>
+        </a>
+        <!-- 5 -->
+        <a class="project-card">
+          <img src="images/services/corporate/5.jpg" alt="Sample 5" />
+          <span class="project-card-info">
+            <span class="project-card-title">Corporate Video Production</span>
+          </span>
+        </a>
+        <!-- 6 -->
+        <a class="project-card">
+          <img src="images/services/corporate/6.jpg" alt="Sample 6" />
+          <span class="project-card-info">
+            <span class="project-card-title">Corporate Video Production</span>
+          </span>
+        </a>
+      </div>
 
-        <div class="contact-social-title">
-          OUR SOCIAL MEDIA
-        </div>
+      <!-- SERVICE 3 -->
+      <div data-category="3d-animation-visual-content">
+        <!-- 1 -->
+        <a class="project-card">
+          <img src="images/services/3d/1.jpg" alt="Sample 1" />
+          <span class="project-card-info">
+            <span class="project-card-title"
+              >3D Animation &amp;<br class="d-none d-lg-block" />
+              Visual Content</span
+            >
+          </span>
+        </a>
+        <!-- 2 -->
+        <a class="project-card">
+          <img src="images/services/3d/2.jpg" alt="Sample 2" />
+          <span class="project-card-info">
+            <span class="project-card-title"
+              >3D Animation &amp;<br class="d-none d-lg-block" />
+              Visual Content</span
+            >
+          </span>
+        </a>
+        <!-- 3 -->
+        <a class="project-card">
+          <img src="images/services/3d/3.jpg" alt="Sample 3" />
+          <span class="project-card-info">
+            <span class="project-card-title"
+              >3D Animation &amp;<br class="d-none d-lg-block" />
+              Visual Content</span
+            >
+          </span>
+        </a>
+        <!-- 4 -->
+        <a class="project-card">
+          <img src="images/services/3d/4.jpg" alt="Sample 4" />
+          <span class="project-card-info">
+            <span class="project-card-title"
+              >3D Animation &amp;<br class="d-none d-lg-block" />
+              Visual Content</span
+            >
+          </span>
+        </a>
+        <!-- 5 -->
+        <a class="project-card">
+          <img src="images/services/3d/5.JPG" alt="Sample 5" />
+          <span class="project-card-info">
+            <span class="project-card-title"
+              >3D Animation &amp;<br class="d-none d-lg-block" />
+              Visual Content</span
+            >
+          </span>
+        </a>
+        <!-- 6 -->
+        <a class="project-card">
+          <img src="images/services/3d/6.png" alt="Sample 6" />
+          <span class="project-card-info">
+            <span class="project-card-title"
+              >3D Animation &amp;<br class="d-none d-lg-block" />
+              Visual Content</span
+            >
+          </span>
+        </a>
+      </div>
 
-        <div class="contact-social-icons">
-          <a href="#" aria-label="LinkedIn" class="social-circle">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="#" aria-label="Instagram" class="social-circle">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" aria-label="Threads" class="social-circle">
-            <i class="fa-brands fa-threads"></i>
-          </a>
-          <a href="#" aria-label="Facebook" class="social-circle">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" aria-label="TikTok" class="social-circle">
-            <i class="fab fa-tiktok"></i>
-          </a>
-        </div>
+      <!-- SERVICE 4 -->
+      <div data-category="event-content-production">
+        <!-- 1 -->
+        <a class="project-card">
+          <img src="images/services/event-con/1.png" alt="Sample 1" />
+          <span class="project-card-info">
+            <span class="project-card-title">Event Content Production</span>
+          </span>
+        </a>
+        <!-- 2 -->
+        <a class="project-card">
+          <img src="images/services/event-con/2.JPG" alt="Sample 2" />
+          <span class="project-card-info">
+            <span class="project-card-title">Event Content Production</span>
+          </span>
+        </a>
+        <!-- 3 -->
+        <a class="project-card">
+          <img src="images/services/event-con/3.jpg" alt="Sample 3" />
+          <span class="project-card-info">
+            <span class="project-card-title">Event Content Production</span>
+          </span>
+        </a>
+        <!-- 4 -->
+        <a class="project-card">
+          <img src="images/services/event-con/4.jpg" alt="Sample 4" />
+          <span class="project-card-info">
+            <span class="project-card-title">Event Content Production</span>
+          </span>
+        </a>
+        <!-- 5 -->
+        <a class="project-card">
+          <img src="images/services/event-con/5.JPG" alt="Sample 5" />
+          <span class="project-card-info">
+            <span class="project-card-title">Event Content Production</span>
+          </span>
+        </a>
+        <!-- 6 -->
+        <a class="project-card">
+          <img src="images/services/event-con/6.JPG" alt="Sample 6" />
+          <span class="project-card-info">
+            <span class="project-card-title">Event Content Production</span>
+          </span>
+        </a>
+      </div>
+
+      <!-- SERVICE 5 -->
+      <div data-category="launch-gimmicks-special-effects">
+        <!-- 1 -->
+        <a class="project-card">
+          <img src="images/services/launch/1.jpg" alt="Sample 1" />
+          <span class="project-card-info">
+            <span class="project-card-title"
+              >Launch Gimmicks & Special Effects</span
+            >
+          </span>
+        </a>
+        <!-- 2 -->
+        <a class="project-card">
+          <img src="images/services/launch/2.jpg" alt="Sample 2" />
+          <span class="project-card-info">
+            <span class="project-card-title"
+              >Launch Gimmicks & Special Effects</span
+            >
+          </span>
+        </a>
+        <!-- 3 -->
+        <a class="project-card">
+          <img src="images/services/launch/3.jpg" alt="Sample 3" />
+          <span class="project-card-info">
+            <span class="project-card-title"
+              >Launch Gimmicks & Special Effects</span
+            >
+          </span>
+        </a>
+        <!-- 4 -->
+        <a class="project-card">
+          <img src="images/services/launch/4.jpg" alt="Sample 4" />
+          <span class="project-card-info">
+            <span class="project-card-title"
+              >Launch Gimmicks & Special Effects</span
+            >
+          </span>
+        </a>
+        <!-- 5 -->
+        <a class="project-card">
+          <img src="images/services/launch/5.jpg" alt="Sample 5" />
+          <span class="project-card-info">
+            <span class="project-card-title"
+              >Launch Gimmicks & Special Effects</span
+            >
+          </span>
+        </a>
+        <!-- 6 -->
+        <a class="project-card">
+          <img src="images/services/launch/6.jpg" alt="Sample 6" />
+          <span class="project-card-info">
+            <span class="project-card-title"
+              >Launch Gimmicks & Special Effects</span
+            >
+          </span>
+        </a>
+      </div>
+
+      <!-- SERVICE 6 -->
+      <div data-category="event-technology-integration">
+        <!-- 1 -->
+        <a class="project-card">
+          <img src="images/services/event-tech/1.JPG" alt="Sample 1" />
+          <span class="project-card-info">
+            <span class="project-card-title">Event Technology Integration</span>
+          </span>
+        </a>
+        <!-- 2 -->
+        <a class="project-card">
+          <img src="images/services/event-tech/2.JPG" alt="Sample 2" />
+          <span class="project-card-info">
+            <span class="project-card-title">Event Technology Integration</span>
+          </span>
+        </a>
+        <!-- 3 -->
+        <a class="project-card">
+          <img src="images/services/event-tech/3.png" alt="Sample 3" />
+          <span class="project-card-info">
+            <span class="project-card-title">Event Technology Integration</span>
+          </span>
+        </a>
+        <!-- 4 -->
+        <a class="project-card">
+          <img src="images/services/event-tech/4.JPG" alt="Sample 4" />
+          <span class="project-card-info">
+            <span class="project-card-title">Event Technology Integration</span>
+          </span>
+        </a>
+        <!-- 5 -->
+        <a class="project-card">
+          <img src="images/services/event-tech/5.JPG" alt="Sample 5" />
+          <span class="project-card-info">
+            <span class="project-card-title">Event Technology Integration</span>
+          </span>
+        </a>
+        <!-- 6 -->
+        <a class="project-card">
+          <img src="images/services/event-tech/6.jpg" alt="Sample 6" />
+          <span class="project-card-info">
+            <span class="project-card-title">Event Technology Integration</span>
+          </span>
+        </a>
       </div>
     </div>
-  </section>
 
-  <footer class="footer">
-    <div class="container footer-wrap">
-      <div class="footer-top">
-        <div class="footer-col footer-col--brand">
-          <img src="images/logo/copylogo.png" alt="NebulaX Logo" class="footer-logo" />
-          <h4 class="footer-tagline">DISCOVER BEYOND THE LIMITS</h4>
-          <p class="footer-desc">
-            Nebula X was established with a clear purpose to fill a growing gap in the event
-            industry. While many players focus on logistics and operations, the true
-            differentiator of any event lies in its content and experience.
-          </p>
-          <p class="footer-desc">
-            Recognising this, Nebula X was formed as a dedicated creative arm to
-            conceptualise and produce high impact content that enhances events of all scales.
-          </p>
-          <div class="footer-socials" style="display: none;">
-            <!-- Social media remvoed per user request -->
+    <!-- our service -->
+
+    <!-- industries we serve -->
+
+    <section
+      id="services"
+      class="about-section scroll-section"
+      aria-label="Industries we serve"
+    >
+      <div class="container about-content">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-12 text-center">
+            <h2 class="industri-title pure-fade-in">
+              THE IMPACT
+              <div style="margin-top: 10px">WE CREATE</div>
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="container-fluid mt-3 mt-md-5 industries-gradient-container"
+        style="
+          background: linear-gradient(
+            270deg,
+            #4d18ab 0%,
+            #5623b8 28%,
+            #5f47c9 60%,
+            #6b8be1 84%,
+            #79b1f1 100%
+          );
+          padding: 0.45rem 0;
+          min-height: 80px;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <div class="container">
+          <div
+            class="row text-center justify-content-center industries-row-scroll"
+          >
+            <!-- SERVICE 1: 3D Animation -->
+            <div
+              class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0 pure-fade-in icon-fade-delay service-tab-item active"
+              data-service="3d-animation"
+              role="button"
+              tabindex="0"
+              aria-pressed="true"
+            >
+              <div class="industry-icon mb-1">
+                <img
+                  src="images/industri/2.png"
+                  alt="3D Animation"
+                  class="industry-img"
+                />
+              </div>
+              <p
+                class="industry-text"
+                style="font-size: 0.625rem; line-height: 1.3"
+              >
+                3D ANIMATION &<br />VISUAL CONTENT
+              </p>
+              <div class="service-tab-underline"></div>
+            </div>
+
+            <!-- SERVICE 2: Launch Gimmicks -->
+            <div
+              class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0 pure-fade-in icon-fade-delay service-tab-item"
+              data-service="launch-gimmick"
+              role="button"
+              tabindex="0"
+              aria-pressed="false"
+            >
+              <div class="industry-icon mb-1">
+                <img
+                  src="images/industri/3.png"
+                  alt="Launch Gimmicks"
+                  class="industry-img"
+                />
+              </div>
+              <p
+                class="industry-text"
+                style="font-size: 0.625rem; line-height: 1.3"
+              >
+                LAUNCH GIMMICKS &<br />SPECIAL EFFECTS
+              </p>
+              <div class="service-tab-underline"></div>
+            </div>
+
+            <!-- SERVICE 3: Corporate Video -->
+            <div
+              class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0 pure-fade-in icon-fade-delay service-tab-item"
+              data-service="corporate-video"
+              role="button"
+              tabindex="0"
+              aria-pressed="false"
+            >
+              <div class="industry-icon mb-1">
+                <img
+                  src="images/industri/4.png"
+                  alt="Corporate Video"
+                  class="industry-img"
+                />
+              </div>
+              <p
+                class="industry-text"
+                style="font-size: 0.625rem; line-height: 1.3"
+              >
+                CORPORATE VIDEO<br />PRODUCTION
+              </p>
+              <div class="service-tab-underline"></div>
+            </div>
+
+            <!-- SERVICE 4: Event Technology -->
+            <div
+              class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0 pure-fade-in icon-fade-delay service-tab-item"
+              data-service="event-tech"
+              role="button"
+              tabindex="0"
+              aria-pressed="false"
+            >
+              <div class="industry-icon mb-1">
+                <img
+                  src="images/industri/5.png"
+                  alt="Event Technology"
+                  class="industry-img"
+                />
+              </div>
+              <p
+                class="industry-text"
+                style="font-size: 0.625rem; line-height: 1.3"
+              >
+                EVENT TECHNOLOGY<br />INTEGRATION
+              </p>
+              <div class="service-tab-underline"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== SERVICE VIDEO CAROUSEL ===== -->
+      <div class="service-video-section" id="serviceVideoSection">
+        <!-- Fade overlay for transition -->
+        <div class="svc-fade-overlay" id="svcFadeOverlay"></div>
+
+        <!-- Carousel track -->
+        <div class="svc-carousel-wrapper" id="svcCarouselWrapper">
+          <div class="svc-carousel-track" id="svcCarouselTrack">
+            <!-- Cards injected by JS -->
           </div>
         </div>
 
-        <div class="footer-col">
-          <h3 class="footer-col-title">Contact Us</h3>
-          <p>
-            +60 108 064 014
-          </p>
-        </div>
+        <!-- Prev / Next buttons -->
+        <button
+          class="svc-nav-btn svc-prev"
+          id="svcPrevBtn"
+          aria-label="Previous video"
+        >
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button
+          class="svc-nav-btn svc-next"
+          id="svcNextBtn"
+          aria-label="Next video"
+        >
+          <i class="fas fa-chevron-right"></i>
+        </button>
 
-        <div class="footer-col">
-          <h3 class="footer-col-title">Location</h3>
-          <p>
-            Nebula Ventures Sdn Bhd <br> Level 30, Menara Prestige,<br>
-            1 Jalan Pinang, 50450 <br> Kuala Lumpur
-          </p>
-        </div>
+        <!-- Dot indicators -->
+        <div class="svc-dots" id="svcDots"></div>
+      </div>
+    </section>
 
-        <div class="footer-col">
-          <h3 class="footer-col-title">Email</h3>
-          <p>
-
-          </p>
+    <section
+      id="clients"
+      class="about-section scroll-section"
+      aria-label="Services/Clients title"
+    >
+      <div class="container about-content">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-12 text-center">
+            <h2
+              class="industri-title pure-fade-in client-fade-delay client-title-margin"
+            >
+              CLIENTS
+            </h2>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="footer-bottom">
-      <p>&copy; 2026, NEBULA X. All rights reserved.</p>
-    </div>
-  </footer>
+      <!-- Infinite Logo Carousel -->
+      <div
+        class="clients-carousel-wrapper pure-fade-in client-carousel-fade-delay container-fluid px-0"
+      >
+        <div class="clients-carousel-track" id="clientsTrack">
+          <!-- Slide 1 -->
+          <div class="clients-slide">
+            <img
+              src="images/clients/atas/Atas-1.png"
+              alt="Client 1"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/atas/Atas-2.png"
+              alt="Client 2"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/atas/Atas-3.png"
+              alt="Client 3"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/atas/Atas-4.png"
+              alt="Client 4"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/atas/Atas-5.png"
+              alt="Client 5"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/atas/Atas-6.png"
+              alt="Client 6"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/atas/Atas-7.png"
+              alt="Client 7"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/atas/Atas-8.png"
+              alt="Client 8"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/atas/Atas-9.png"
+              alt="Client 9"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/atas/Atas-10.png"
+              alt="Client 10"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/atas/Atas-11.png"
+              alt="Client 11"
+              class="client-logo"
+            />
+          </div>
+        </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const navLinks = Array.from(
-        document.querySelectorAll(".navbar-nav .nav-link"),
-      );
-      // const agencyButtons = Array.from(
-      //   document.querySelectorAll(".agency-header .agency-link"),
-      // );
-      const agencyButtons = [];
-      const navCollapse = document.getElementById("navbarNav");
+        <div
+          class="clients-carousel-track clients-carousel-track-reverse"
+          id="clientsTrackReverse"
+        >
+          <!-- Slide 2 (Bottom) -->
+          <div class="clients-slide">
+            <img
+              src="images/clients/bawah/bawah-1.png"
+              alt="Client JCorp"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/bawah/bawah-2.png"
+              alt="Client JLG"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/bawah/bawah-3.png"
+              alt="Client JSCF"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/bawah/bawah-4.png"
+              alt="Client KPJ"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/bawah/bawah-5.png"
+              alt="Client MIH"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/bawah/bawah-6.png"
+              alt="Client Segi Fresh"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/bawah/bawah-7.png"
+              alt="Client TMIYC"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/bawah/bawah-8.png"
+              alt="Client Visit Selangor"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/bawah/bawah-9.png"
+              alt="Client Visit Selangor"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/bawah/bawah-10.png"
+              alt="Client Visit Selangor"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/bawah/bawah-11.png"
+              alt="Client Visit Selangor"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/bawah/bawah-12.png"
+              alt="Client Visit Selangor"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/bawah/bawah-13.png"
+              alt="Client Visit Selangor"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/bawah/bawah-14.png"
+              alt="Client Visit Selangor"
+              class="client-logo"
+            />
+            <img
+              src="images/clients/bawah/bawah-15.png"
+              alt="Client Visit Selangor"
+              class="client-logo"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
-      if (!navLinks.length) return;
+    <section
+      id="contact"
+      class="contact-section scroll-section"
+      aria-label="Contact us"
+    >
+      <div class="container contact-content scroll-fade">
+        <div class="contact-card-redesign">
+          <h2 class="contact-title text-center">
+            WE'RE ALWAYS READY TO HELP YOU AND<br />
+            ANSWER YOUR QUESTIONS
+          </h2>
 
-      const navSectionMap = navLinks
-        .map((link) => {
-          const href = link.getAttribute("href");
-          return {
-            link,
-            href,
-            section:
-              href && href.startsWith("#")
-                ? document.querySelector(href)
-                : null,
-          };
-        })
-        .filter((item) => item.section);
+          <div class="contact-click-here">
+            CLICK <span class="text-gradient-pink">HERE</span>
+            <span class="animated-arrows">
+              <i class="fa-solid fa-angles-down"></i>
+            </span>
+          </div>
 
-      const servicesSection = document.querySelector(
-        "#services.about-section",
-      );
-      const allowServicesParallax =
-        !!servicesSection &&
-        !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      let servicesTarget = 0;
-      let servicesCurrent = 0;
-      let servicesRaf = null;
+          <div class="contact-big-icons">
+            <a
+              href="https://wa.me/+60108064014"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="WhatsApp"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
 
-      const applyServicesParallax = () => {
-        servicesRaf = null;
-        if (!allowServicesParallax || !servicesSection) return;
+          <div class="contact-social-title">OUR SOCIAL MEDIA</div>
 
-        servicesCurrent += (servicesTarget - servicesCurrent) * 0.12;
+          <div class="contact-social-icons">
+            <a href="#" aria-label="LinkedIn" class="social-circle">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-circle">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="Threads" class="social-circle">
+              <i class="fa-brands fa-threads"></i>
+            </a>
+            <a href="#" aria-label="Facebook" class="social-circle">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="TikTok" class="social-circle">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        const fullOffset = servicesCurrent * -28;
-        const singleOffset = servicesCurrent * 22;
+    <footer class="footer">
+      <div class="container footer-wrap">
+        <div class="footer-top">
+          <div class="footer-col footer-col--brand">
+            <img
+              src="images/logo/copylogo.png"
+              alt="NebulaX Logo"
+              class="footer-logo"
+            />
+            <h4 class="footer-tagline">DISCOVER BEYOND THE LIMITS</h4>
+            <p class="footer-desc">
+              Nebula X was established with a clear purpose to fill a growing
+              gap in the event industry. While many players focus on logistics
+              and operations, the true differentiator of any event lies in its
+              content and experience.
+            </p>
+            <p class="footer-desc">
+              Recognising this, Nebula X was formed as a dedicated creative arm
+              to conceptualise and produce high impact content that enhances
+              events of all scales.
+            </p>
+            <div class="footer-socials" style="display: none">
+              <!-- Social media remvoed per user request -->
+            </div>
+          </div>
 
-        servicesSection.style.setProperty(
-          "--services-full-offset",
-          `${fullOffset.toFixed(2)}px`,
+          <div class="footer-col">
+            <h3 class="footer-col-title">Contact Us</h3>
+            <p>+60 108 064 014</p>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-col-title">Location</h3>
+            <p>
+              Nebula Ventures Sdn Bhd <br />
+              Level 30, Menara Prestige,<br />
+              1 Jalan Pinang, 50450 <br />
+              Kuala Lumpur
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-col-title">Email</h3>
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026, NEBULA X. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const navLinks = Array.from(
+          document.querySelectorAll(".navbar-nav .nav-link"),
         );
-        servicesSection.style.setProperty(
-          "--services-single-offset",
-          `${singleOffset.toFixed(2)}px`,
+        // const agencyButtons = Array.from(
+        //   document.querySelectorAll(".agency-header .agency-link"),
+        // );
+        const agencyButtons = [];
+        const navCollapse = document.getElementById("navbarNav");
+
+        if (!navLinks.length) return;
+
+        const navSectionMap = navLinks
+          .map((link) => {
+            const href = link.getAttribute("href");
+            return {
+              link,
+              href,
+              section:
+                href && href.startsWith("#")
+                  ? document.querySelector(href)
+                  : null,
+            };
+          })
+          .filter((item) => item.section);
+
+        const servicesSection = document.querySelector(
+          "#services.about-section",
         );
+        const allowServicesParallax =
+          !!servicesSection &&
+          !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        let servicesTarget = 0;
+        let servicesCurrent = 0;
+        let servicesRaf = null;
 
-        if (Math.abs(servicesTarget - servicesCurrent) > 0.001) {
-          servicesRaf = window.requestAnimationFrame(applyServicesParallax);
-        }
-      };
+        const applyServicesParallax = () => {
+          servicesRaf = null;
+          if (!allowServicesParallax || !servicesSection) return;
 
-      const scheduleServicesParallax = () => {
-        if (!allowServicesParallax || !servicesSection) return;
-        const rect = servicesSection.getBoundingClientRect();
-        const viewportHeight = window.innerHeight || 1;
-        const centerOffset = rect.top + rect.height / 2 - viewportHeight / 2;
-        servicesTarget = Math.max(
-          -1,
-          Math.min(1, centerOffset / viewportHeight),
-        );
+          servicesCurrent += (servicesTarget - servicesCurrent) * 0.12;
 
-        if (servicesRaf === null) {
-          servicesRaf = window.requestAnimationFrame(applyServicesParallax);
-        }
-      };
+          const fullOffset = servicesCurrent * -28;
+          const singleOffset = servicesCurrent * 22;
 
-      const setActiveNav = (activeLink) => {
-        if (!activeLink) return;
+          servicesSection.style.setProperty(
+            "--services-full-offset",
+            `${fullOffset.toFixed(2)}px`,
+          );
+          servicesSection.style.setProperty(
+            "--services-single-offset",
+            `${singleOffset.toFixed(2)}px`,
+          );
+
+          if (Math.abs(servicesTarget - servicesCurrent) > 0.001) {
+            servicesRaf = window.requestAnimationFrame(applyServicesParallax);
+          }
+        };
+
+        const scheduleServicesParallax = () => {
+          if (!allowServicesParallax || !servicesSection) return;
+          const rect = servicesSection.getBoundingClientRect();
+          const viewportHeight = window.innerHeight || 1;
+          const centerOffset = rect.top + rect.height / 2 - viewportHeight / 2;
+          servicesTarget = Math.max(
+            -1,
+            Math.min(1, centerOffset / viewportHeight),
+          );
+
+          if (servicesRaf === null) {
+            servicesRaf = window.requestAnimationFrame(applyServicesParallax);
+          }
+        };
+
+        const setActiveNav = (activeLink) => {
+          if (!activeLink) return;
+          navLinks.forEach((link) => {
+            link.classList.remove("nav-pill", "active");
+            link.removeAttribute("aria-current");
+          });
+          activeLink.classList.add("nav-pill", "active");
+          activeLink.setAttribute("aria-current", "page");
+        };
+
+        const setActiveAgency = (activeButton) => {
+          if (!agencyButtons.length || !activeButton) return;
+          agencyButtons.forEach((button) => {
+            button.classList.remove("agency-active");
+            button.setAttribute("aria-pressed", "false");
+          });
+          activeButton.classList.add("agency-active");
+          activeButton.setAttribute("aria-pressed", "true");
+        };
+
+        const getLinkByHash = (links) => {
+          const currentHash = window.location.hash;
+          return links.find(
+            (link) => link.getAttribute("href") === currentHash,
+          );
+        };
+
+        const getVisibleSectionNavLink = () => {
+          const threshold = window.scrollY + 140;
+          let current = null;
+
+          navSectionMap.forEach((item) => {
+            if (item.section.offsetTop <= threshold) {
+              current = item.link;
+            }
+          });
+
+          return current;
+        };
+
+        const syncActiveByScroll = () => {
+          const hash = window.location.hash;
+          const hashTargetExists = hash ? !!document.querySelector(hash) : true;
+          if (!hashTargetExists) return;
+
+          const visibleNav = getVisibleSectionNavLink();
+          if (visibleNav) {
+            setActiveNav(visibleNav);
+          }
+
+          scheduleServicesParallax();
+        };
+
+        // Ensure 1 client slide is seamlessly looped by cloning it dynamically
+        const initClientsCarousel = () => {
+          const track = document.getElementById("clientsTrack");
+          if (track) {
+            const slide = track.querySelector(".clients-slide");
+            if (slide) {
+              // Duplicate 3 times for a seamless loop
+              for (let i = 0; i < 3; i++) {
+                track.appendChild(slide.cloneNode(true));
+              }
+            }
+          }
+
+          const trackReverse = document.getElementById("clientsTrackReverse");
+          if (trackReverse) {
+            const slideReverse = trackReverse.querySelector(".clients-slide");
+            if (slideReverse) {
+              // Duplicate 3 times for a seamless loop
+              for (let i = 0; i < 3; i++) {
+                trackReverse.appendChild(slideReverse.cloneNode(true));
+              }
+            }
+          }
+        };
+
+        initClientsCarousel();
+
+        const closeMobileMenu = () => {
+          if (!navCollapse || !navCollapse.classList.contains("show")) return;
+          navCollapse.classList.remove("show");
+          const toggler = document.querySelector(
+            '.navbar-toggler[data-bs-target="#navbarNav"]',
+          );
+          if (toggler) toggler.setAttribute("aria-expanded", "false");
+        };
+
+        const initialNav =
+          getLinkByHash(navLinks) ||
+          navLinks.find((link) => link.classList.contains("nav-pill")) ||
+          navLinks[0];
+        setActiveNav(initialNav);
+
         navLinks.forEach((link) => {
-          link.classList.remove("nav-pill", "active");
-          link.removeAttribute("aria-current");
-        });
-        activeLink.classList.add("nav-pill", "active");
-        activeLink.setAttribute("aria-current", "page");
-      };
-
-      const setActiveAgency = (activeButton) => {
-        if (!agencyButtons.length || !activeButton) return;
-        agencyButtons.forEach((button) => {
-          button.classList.remove("agency-active");
-          button.setAttribute("aria-pressed", "false");
-        });
-        activeButton.classList.add("agency-active");
-        activeButton.setAttribute("aria-pressed", "true");
-      };
-
-      const getLinkByHash = (links) => {
-        const currentHash = window.location.hash;
-        return links.find(
-          (link) => link.getAttribute("href") === currentHash,
-        );
-      };
-
-      const getVisibleSectionNavLink = () => {
-        const threshold = window.scrollY + 140;
-        let current = null;
-
-        navSectionMap.forEach((item) => {
-          if (item.section.offsetTop <= threshold) {
-            current = item.link;
-          }
-        });
-
-        return current;
-      };
-
-      const syncActiveByScroll = () => {
-        const hash = window.location.hash;
-        const hashTargetExists = hash ? !!document.querySelector(hash) : true;
-        if (!hashTargetExists) return;
-
-        const visibleNav = getVisibleSectionNavLink();
-        if (visibleNav) {
-          setActiveNav(visibleNav);
-        }
-
-        scheduleServicesParallax();
-      };
-
-      // Ensure 1 client slide is seamlessly looped by cloning it dynamically
-      const initClientsCarousel = () => {
-        const track = document.getElementById("clientsTrack");
-        if (track) {
-          const slide = track.querySelector(".clients-slide");
-          if (slide) {
-            // Duplicate 3 times for a seamless loop
-            for (let i = 0; i < 3; i++) {
-              track.appendChild(slide.cloneNode(true));
-            }
-          }
-        }
-
-        const trackReverse = document.getElementById("clientsTrackReverse");
-        if (trackReverse) {
-          const slideReverse = trackReverse.querySelector(".clients-slide");
-          if (slideReverse) {
-            // Duplicate 3 times for a seamless loop
-            for (let i = 0; i < 3; i++) {
-              trackReverse.appendChild(slideReverse.cloneNode(true));
-            }
-          }
-        }
-      };
-
-      initClientsCarousel();
-
-      const closeMobileMenu = () => {
-        if (!navCollapse || !navCollapse.classList.contains("show")) return;
-        navCollapse.classList.remove("show");
-        const toggler = document.querySelector(
-          '.navbar-toggler[data-bs-target="#navbarNav"]',
-        );
-        if (toggler) toggler.setAttribute("aria-expanded", "false");
-      };
-
-      const initialNav =
-        getLinkByHash(navLinks) ||
-        navLinks.find((link) => link.classList.contains("nav-pill")) ||
-        navLinks[0];
-      setActiveNav(initialNav);
-
-      navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          setActiveNav(link);
-          closeMobileMenu();
-        });
-      });
-
-      if (agencyButtons.length) {
-        const initialAgencyButton = agencyButtons.find((button) =>
-          button.classList.contains("agency-active"),
-        );
-
-        agencyButtons.forEach((button) => {
-          button.setAttribute("aria-pressed", "false");
-          button.addEventListener("click", () => {
-            setActiveAgency(button);
+          link.addEventListener("click", () => {
+            setActiveNav(link);
+            closeMobileMenu();
           });
         });
 
-        if (initialAgencyButton) {
-          setActiveAgency(initialAgencyButton);
-        }
-      }
+        if (agencyButtons.length) {
+          const initialAgencyButton = agencyButtons.find((button) =>
+            button.classList.contains("agency-active"),
+          );
 
-      const carouselRoot = document.querySelector(".services-carousel");
-      if (carouselRoot) {
-        const viewport = carouselRoot.querySelector(".carousel-viewport");
-        const track = carouselRoot.querySelector(".carousel-track");
-        const prevButton = carouselRoot.querySelector(
-          ".carousel-control-prev",
-        );
-        const nextButton = carouselRoot.querySelector(
-          ".carousel-control-next",
-        );
-        const originalCards = Array.from(track.children).map((card) =>
-          card.cloneNode(true),
-        );
-        const autoDelay = 4000;
-        let cardsPerView = 5;
-        let currentIndex = 0;
-        let autoTimer = null;
-
-        const getCardsPerView = () =>
-          Number.parseInt(
-            getComputedStyle(carouselRoot).getPropertyValue(
-              "--cards-per-view",
-            ),
-            10,
-          ) || 5;
-
-        const getStepSize = () => {
-          const firstCard = track.children[0];
-          if (!firstCard) return 0;
-          const gap = Number.parseFloat(getComputedStyle(track).gap) || 0;
-          return firstCard.getBoundingClientRect().width + gap;
-        };
-
-        const setTrackPosition = (animate = true) => {
-          const step = getStepSize();
-          track.style.transition = animate ? "transform 0.55s ease" : "none";
-          track.style.transform = `translateX(-${step * currentIndex}px)`;
-        };
-
-        const buildLoop = () => {
-          let activeIndex = 0;
-          if (track.children.length > originalCards.length) {
-            activeIndex = (currentIndex - cardsPerView) % originalCards.length;
-            if (activeIndex < 0) activeIndex += originalCards.length;
-          }
-
-          cardsPerView = getCardsPerView();
-          track.innerHTML = "";
-
-          const headClones = originalCards
-            .slice(-cardsPerView)
-            .map((card) => card.cloneNode(true));
-          const tailClones = originalCards
-            .slice(0, cardsPerView)
-            .map((card) => card.cloneNode(true));
-          [
-            ...headClones,
-            ...originalCards.map((card) => card.cloneNode(true)),
-            ...tailClones,
-          ].forEach((card) => {
-            track.appendChild(card);
+          agencyButtons.forEach((button) => {
+            button.setAttribute("aria-pressed", "false");
+            button.addEventListener("click", () => {
+              setActiveAgency(button);
+            });
           });
 
-          currentIndex = cardsPerView + activeIndex;
-          setTrackPosition(false);
-        };
+          if (initialAgencyButton) {
+            setActiveAgency(initialAgencyButton);
+          }
+        }
 
-        const moveNext = () => {
-          currentIndex += 1;
-          setTrackPosition(true);
-        };
+        const carouselRoot = document.querySelector(".services-carousel");
+        if (carouselRoot) {
+          const viewport = carouselRoot.querySelector(".carousel-viewport");
+          const track = carouselRoot.querySelector(".carousel-track");
+          const prevButton = carouselRoot.querySelector(
+            ".carousel-control-prev",
+          );
+          const nextButton = carouselRoot.querySelector(
+            ".carousel-control-next",
+          );
+          const originalCards = Array.from(track.children).map((card) =>
+            card.cloneNode(true),
+          );
+          const autoDelay = 4000;
+          let cardsPerView = 5;
+          let currentIndex = 0;
+          let autoTimer = null;
 
-        const movePrev = () => {
-          currentIndex -= 1;
-          setTrackPosition(true);
-        };
+          const getCardsPerView = () =>
+            Number.parseInt(
+              getComputedStyle(carouselRoot).getPropertyValue(
+                "--cards-per-view",
+              ),
+              10,
+            ) || 5;
 
-        const startAuto = () => {
-          if (autoTimer) clearInterval(autoTimer);
-          autoTimer = setInterval(moveNext, autoDelay);
-        };
+          const getStepSize = () => {
+            const firstCard = track.children[0];
+            if (!firstCard) return 0;
+            const gap = Number.parseFloat(getComputedStyle(track).gap) || 0;
+            return firstCard.getBoundingClientRect().width + gap;
+          };
 
-        const restartAuto = () => {
+          const setTrackPosition = (animate = true) => {
+            const step = getStepSize();
+            track.style.transition = animate ? "transform 0.55s ease" : "none";
+            track.style.transform = `translateX(-${step * currentIndex}px)`;
+          };
+
+          const buildLoop = () => {
+            let activeIndex = 0;
+            if (track.children.length > originalCards.length) {
+              activeIndex =
+                (currentIndex - cardsPerView) % originalCards.length;
+              if (activeIndex < 0) activeIndex += originalCards.length;
+            }
+
+            cardsPerView = getCardsPerView();
+            track.innerHTML = "";
+
+            const headClones = originalCards
+              .slice(-cardsPerView)
+              .map((card) => card.cloneNode(true));
+            const tailClones = originalCards
+              .slice(0, cardsPerView)
+              .map((card) => card.cloneNode(true));
+            [
+              ...headClones,
+              ...originalCards.map((card) => card.cloneNode(true)),
+              ...tailClones,
+            ].forEach((card) => {
+              track.appendChild(card);
+            });
+
+            currentIndex = cardsPerView + activeIndex;
+            setTrackPosition(false);
+          };
+
+          const moveNext = () => {
+            currentIndex += 1;
+            setTrackPosition(true);
+          };
+
+          const movePrev = () => {
+            currentIndex -= 1;
+            setTrackPosition(true);
+          };
+
+          const startAuto = () => {
+            if (autoTimer) clearInterval(autoTimer);
+            autoTimer = setInterval(moveNext, autoDelay);
+          };
+
+          const restartAuto = () => {
+            startAuto();
+          };
+
+          track.addEventListener("transitionend", (event) => {
+            if (event.target !== track) return;
+            const totalOriginal = originalCards.length;
+            if (currentIndex >= totalOriginal + cardsPerView) {
+              currentIndex -= totalOriginal;
+              setTrackPosition(false);
+            }
+            if (currentIndex < cardsPerView) {
+              currentIndex += totalOriginal;
+              setTrackPosition(false);
+            }
+          });
+
+          nextButton?.addEventListener("click", () => {
+            moveNext();
+            restartAuto();
+          });
+
+          prevButton?.addEventListener("click", () => {
+            movePrev();
+            restartAuto();
+          });
+
+          let resizeWidth = window.innerWidth;
+          let resizeTimer = null;
+          window.addEventListener("resize", () => {
+            if (window.innerWidth === resizeWidth) return;
+            resizeWidth = window.innerWidth;
+            if (resizeTimer) clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+              buildLoop();
+            }, 120);
+          });
+
+          buildLoop();
           startAuto();
-        };
+        }
 
-        track.addEventListener("transitionend", (event) => {
-          if (event.target !== track) return;
-          const totalOriginal = originalCards.length;
-          if (currentIndex >= totalOriginal + cardsPerView) {
-            currentIndex -= totalOriginal;
-            setTrackPosition(false);
-          }
-          if (currentIndex < cardsPerView) {
-            currentIndex += totalOriginal;
-            setTrackPosition(false);
-          }
-        });
-
-        nextButton?.addEventListener("click", () => {
-          moveNext();
-          restartAuto();
-        });
-
-        prevButton?.addEventListener("click", () => {
-          movePrev();
-          restartAuto();
-        });
-
-        let resizeWidth = window.innerWidth;
-        let resizeTimer = null;
-        window.addEventListener("resize", () => {
-          if (window.innerWidth === resizeWidth) return;
-          resizeWidth = window.innerWidth;
-          if (resizeTimer) clearTimeout(resizeTimer);
-          resizeTimer = setTimeout(() => {
-            buildLoop();
-          }, 120);
-        });
-
-        buildLoop();
-        startAuto();
-      }
-
-      /* --- Projects Showcase JS (COMMENTED OUT) ---
+        /* --- Projects Showcase JS (COMMENTED OUT) ---
       const projectsRoot = document.querySelector(".projects-showcase");
       if (projectsRoot) {
         const frame = projectsRoot.querySelector(".projects-frame");
@@ -1419,546 +1740,556 @@
       }
       --- End Projects Showcase JS --- */
 
-      const heroSection = document.querySelector(".hero");
-      if (heroSection) {
-        const heroLines = Array.from(
-          heroSection.querySelectorAll(".hero-line"),
+        const heroSection = document.querySelector(".hero");
+        if (heroSection) {
+          const heroLines = Array.from(
+            heroSection.querySelectorAll(".hero-line"),
+          );
+
+          const heroRevealObserver = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  heroSection.classList.add("is-visible");
+                }
+              });
+            },
+            {
+              threshold: 0.25,
+            },
+          );
+
+          heroRevealObserver.observe(heroSection);
+        }
+
+        const aboutRevealSection = document.querySelector(
+          "#about.about-section",
         );
+        if (aboutRevealSection) {
+          const revealAboutOnScroll = () => {
+            if (aboutRevealSection.classList.contains("about-is-visible"))
+              return;
+            const rect = aboutRevealSection.getBoundingClientRect();
+            const triggerLine = window.innerHeight * 0.82;
+            if (rect.top <= triggerLine) {
+              aboutRevealSection.classList.add("about-is-visible");
+              window.removeEventListener("scroll", revealAboutOnScroll);
+            }
+          };
 
+          window.addEventListener("scroll", revealAboutOnScroll, {
+            passive: true,
+          });
+          revealAboutOnScroll();
 
-        const heroRevealObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                heroSection.classList.add("is-visible");
-              }
+          // Scroll-based parallax: X fly-in dari luar layar saat section masuk viewport
+          const aboutBgItems = Array.from(
+            aboutRevealSection.querySelectorAll(
+              ".about-bg__item[data-about-dir]",
+            ),
+          );
+          let aboutScrollRafId = null;
+
+          const applyAboutScrollParallax = () => {
+            aboutScrollRafId = null;
+            if (!aboutBgItems.length) return;
+
+            const rect = aboutRevealSection.getBoundingClientRect();
+            const vh = window.innerHeight;
+
+            // progress: 0 = section belum masuk viewport (dari bawah)
+            //           1 = section top sudah mencapai viewport top
+            const progress = Math.max(0, Math.min(1, (vh - rect.top) / vh));
+
+            aboutBgItems.forEach((item) => {
+              const dir = parseFloat(item.dataset.aboutDir) || 1;
+              // Semakin section masuk viewport, semakin menyebar ke luar
+              // left (dir=-1): bergerak ke kiri → translateX negatif
+              // right (dir=1): bergerak ke kanan → translateX positif
+              const moveX = 200 * progress * dir;
+              item.style.transform = `translateY(-50%) translateX(${moveX.toFixed(2)}px)`;
             });
-          },
-          {
-            threshold: 0.25,
-          },
-        );
+          };
 
-        heroRevealObserver.observe(heroSection);
+          const scheduleAboutScrollParallax = () => {
+            if (aboutScrollRafId === null) {
+              aboutScrollRafId = window.requestAnimationFrame(
+                applyAboutScrollParallax,
+              );
+            }
+          };
 
+          window.addEventListener("scroll", scheduleAboutScrollParallax, {
+            passive: true,
+          });
 
+          // Jalankan sekali saat load juga
+          applyAboutScrollParallax();
+        }
 
-      }
+        window.addEventListener("resize", scheduleServicesParallax);
+        scheduleServicesParallax();
 
-      const aboutRevealSection = document.querySelector(
-        "#about.about-section",
-      );
-      if (aboutRevealSection) {
-        const revealAboutOnScroll = () => {
-          if (aboutRevealSection.classList.contains("about-is-visible"))
-            return;
-          const rect = aboutRevealSection.getBoundingClientRect();
-          const triggerLine = window.innerHeight * 0.82;
-          if (rect.top <= triggerLine) {
-            aboutRevealSection.classList.add("about-is-visible");
-            window.removeEventListener("scroll", revealAboutOnScroll);
-          }
-        };
+        window.addEventListener("hashchange", () => {
+          const navByHash = getLinkByHash(navLinks);
+          if (navByHash) setActiveNav(navByHash);
+        });
 
-        window.addEventListener("scroll", revealAboutOnScroll, {
+        window.addEventListener("scroll", syncActiveByScroll, {
           passive: true,
         });
-        revealAboutOnScroll();
+        syncActiveByScroll();
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const scrollObserverOptions = {
+        threshold: 0.18,
+        rootMargin: "0px 0px -80px 0px",
+      };
 
-        // Scroll-based parallax: X fly-in dari luar layar saat section masuk viewport
-        const aboutBgItems = Array.from(
-          aboutRevealSection.querySelectorAll(".about-bg__item[data-about-dir]")
-        );
-        let aboutScrollRafId = null;
-
-        const applyAboutScrollParallax = () => {
-          aboutScrollRafId = null;
-          if (!aboutBgItems.length) return;
-
-          const rect = aboutRevealSection.getBoundingClientRect();
-          const vh = window.innerHeight;
-
-          // progress: 0 = section belum masuk viewport (dari bawah)
-          //           1 = section top sudah mencapai viewport top
-          const progress = Math.max(0, Math.min(1, (vh - rect.top) / vh));
-
-          aboutBgItems.forEach((item) => {
-            const dir = parseFloat(item.dataset.aboutDir) || 1;
-            // Semakin section masuk viewport, semakin menyebar ke luar
-            // left (dir=-1): bergerak ke kiri → translateX negatif
-            // right (dir=1): bergerak ke kanan → translateX positif
-            const moveX = 200 * progress * dir;
-            item.style.transform = `translateY(-50%) translateX(${moveX.toFixed(2)}px)`;
-          });
-        };
-
-        const scheduleAboutScrollParallax = () => {
-          if (aboutScrollRafId === null) {
-            aboutScrollRafId = window.requestAnimationFrame(applyAboutScrollParallax);
+      const scrollSectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("scroll-visible");
+            scrollSectionObserver.unobserve(entry.target);
           }
-        };
-
-        window.addEventListener("scroll", scheduleAboutScrollParallax, { passive: true });
-
-        // Jalankan sekali saat load juga
-        applyAboutScrollParallax();
-      }
-
-      window.addEventListener("resize", scheduleServicesParallax);
-      scheduleServicesParallax();
-
-      window.addEventListener("hashchange", () => {
-        const navByHash = getLinkByHash(navLinks);
-        if (navByHash) setActiveNav(navByHash);
-      });
-
-      window.addEventListener("scroll", syncActiveByScroll, {
-        passive: true,
-      });
-      syncActiveByScroll();
-    });
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    const scrollObserverOptions = {
-      threshold: 0.18,
-      rootMargin: "0px 0px -80px 0px",
-    };
-
-    const scrollSectionObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("scroll-visible");
-          scrollSectionObserver.unobserve(entry.target);
-        }
-      });
-    }, scrollObserverOptions);
-
-    document.querySelectorAll(".scroll-section").forEach((section) => {
-      scrollSectionObserver.observe(section);
-    });
-
-    const hero = document.querySelector(".hero");
-    const parallaxLayers = Array.from(
-      document.querySelectorAll("[data-parallax-speed]")
-    );
-
-    let lastScrollY = window.scrollY;
-    let rafId = null;
-    const reduceMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    const applyParallax = () => {
-      rafId = null;
-      const scrollY = window.scrollY;
-
-      // Toggle hero-scroll class
-      if (hero) {
-        hero.classList.toggle("hero-scroll", scrollY > 32);
-      }
-
-      // Scroll parallax untuk setiap layer
-      if (!reduceMotion && parallaxLayers.length) {
-        parallaxLayers.forEach((layer) => {
-          const speed = parseFloat(layer.dataset.parallaxSpeed) || 0.04;
-          // Elemen bergerak ke atas lebih lambat dari scroll → efek parallax
-          const offset = scrollY * speed * -1;
-          layer.style.transform = `translate3d(0, ${offset}px, 0)`;
         });
-      }
-    };
+      }, scrollObserverOptions);
 
-    const onScroll = () => {
-      if (rafId === null) {
-        rafId = window.requestAnimationFrame(applyParallax);
-      }
-    };
+      document.querySelectorAll(".scroll-section").forEach((section) => {
+        scrollSectionObserver.observe(section);
+      });
 
-    window.addEventListener("scroll", onScroll, { passive: true });
+      const hero = document.querySelector(".hero");
+      const parallaxLayers = Array.from(
+        document.querySelectorAll("[data-parallax-speed]"),
+      );
 
-    // Jalankan sekali saat load
-    applyParallax();
-  </script>
+      let lastScrollY = window.scrollY;
+      let rafId = null;
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
 
-  <!-- Parallax Body Background + Mobile Bg2 Alignment (Unified) -->
-  <script>
-    (function () {
-      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      var SPEED = 0.30;
-      var MOBILE_BREAKPOINT = 768;
-      var renderedHeight = 0; // tinggi render modify3.png di mobile
-      var ticking = false;
+      const applyParallax = () => {
+        rafId = null;
+        const scrollY = window.scrollY;
 
-      // Hitung tinggi render modify3.png di layar mobile
-      function calcRenderedHeight(callback) {
-        if (window.innerWidth >= MOBILE_BREAKPOINT) {
-          renderedHeight = 0;
-          if (callback) callback();
-          return;
+        // Toggle hero-scroll class
+        if (hero) {
+          hero.classList.toggle("hero-scroll", scrollY > 32);
         }
-        var img = new Image();
-        img.onload = function () {
-          renderedHeight = Math.round(window.innerWidth * (img.naturalHeight / img.naturalWidth));
-          if (callback) callback();
-        };
-        img.src = "images/bg/modfy3.png";
-      }
 
-      function updateBgParallax() {
-        ticking = false;
-        var scrollY = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (reduceMotion) return;
-
-        var offset = scrollY * SPEED;
-
-        document.body.style.backgroundPositionY = offset + "px";
-      }
-
-      function onScroll() {
-        if (!ticking) {
-          ticking = true;
-          window.requestAnimationFrame(updateBgParallax);
+        // Scroll parallax untuk setiap layer
+        if (!reduceMotion && parallaxLayers.length) {
+          parallaxLayers.forEach((layer) => {
+            const speed = parseFloat(layer.dataset.parallaxSpeed) || 0.04;
+            // Elemen bergerak ke atas lebih lambat dari scroll → efek parallax
+            const offset = scrollY * speed * -1;
+            layer.style.transform = `translate3d(0, ${offset}px, 0)`;
+          });
         }
-      }
+      };
+
+      const onScroll = () => {
+        if (rafId === null) {
+          rafId = window.requestAnimationFrame(applyParallax);
+        }
+      };
 
       window.addEventListener("scroll", onScroll, { passive: true });
 
-      window.addEventListener("resize", function () {
+      // Jalankan sekali saat load
+      applyParallax();
+    </script>
+
+    <!-- Parallax Body Background + Mobile Bg2 Alignment (Unified) -->
+    <script>
+      (function () {
+        var reduceMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        var SPEED = 0.3;
+        var MOBILE_BREAKPOINT = 768;
+        var renderedHeight = 0; // tinggi render modify3.png di mobile
+        var ticking = false;
+
+        // Hitung tinggi render modify3.png di layar mobile
+        function calcRenderedHeight(callback) {
+          if (window.innerWidth >= MOBILE_BREAKPOINT) {
+            renderedHeight = 0;
+            if (callback) callback();
+            return;
+          }
+          var img = new Image();
+          img.onload = function () {
+            renderedHeight = Math.round(
+              window.innerWidth * (img.naturalHeight / img.naturalWidth),
+            );
+            if (callback) callback();
+          };
+          img.src = "images/bg/modfy3.png";
+        }
+
+        function updateBgParallax() {
+          ticking = false;
+          var scrollY =
+            window.pageYOffset || document.documentElement.scrollTop;
+
+          if (reduceMotion) return;
+
+          var offset = scrollY * SPEED;
+
+          document.body.style.backgroundPositionY = offset + "px";
+        }
+
+        function onScroll() {
+          if (!ticking) {
+            ticking = true;
+            window.requestAnimationFrame(updateBgParallax);
+          }
+        }
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+
+        window.addEventListener("resize", function () {
+          calcRenderedHeight(updateBgParallax);
+        });
+
+        // Init: hitung dulu, baru jalankan parallax
         calcRenderedHeight(updateBgParallax);
-      });
+      })();
+    </script>
 
-      // Init: hitung dulu, baru jalankan parallax
-      calcRenderedHeight(updateBgParallax);
-    })();
-  </script>
+    <!-- Custom Video Player JS -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const playBtn = document.getElementById("playPauseBtn");
+        const timeDisplay = document.getElementById("timeDisplay");
+        const progressSlider = document.getElementById("progressSlider");
+        const progressBarFill = document.getElementById("progressBarFill");
+        const volumeBtn = document.getElementById("volumeBtn");
+        const volumeSlider = document.getElementById("volumeSlider");
+        const customVideoWrapper = document.querySelector(
+          ".custom-video-wrapper",
+        );
+        const prevVideoBtn = document.getElementById("prevVideoBtn");
+        const nextVideoBtn = document.getElementById("nextVideoBtn");
 
-  <!-- Custom Video Player JS -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const playBtn = document.getElementById('playPauseBtn');
-      const timeDisplay = document.getElementById('timeDisplay');
-      const progressSlider = document.getElementById('progressSlider');
-      const progressBarFill = document.getElementById('progressBarFill');
-      const volumeBtn = document.getElementById('volumeBtn');
-      const volumeSlider = document.getElementById('volumeSlider');
-      const customVideoWrapper = document.querySelector('.custom-video-wrapper');
-      const prevVideoBtn = document.getElementById('prevVideoBtn');
-      const nextVideoBtn = document.getElementById('nextVideoBtn');
+        // Mengubah sistem ke pre-rendered elements slider track (tanpa delay layar hitam, Infinite Loop)
+        const videoTrack = document.getElementById("videoSliderTrack");
+        const originalVideos = Array.from(
+          document.querySelectorAll(".video-slider-track .section-video"),
+        );
 
-      // Mengubah sistem ke pre-rendered elements slider track (tanpa delay layar hitam, Infinite Loop)
-      const videoTrack = document.getElementById('videoSliderTrack');
-      const originalVideos = Array.from(document.querySelectorAll('.video-slider-track .section-video'));
+        let currentVideoIndex = 0;
+        let activeVideo = originalVideos[0]; // Video pertama
+        let isAnimating = false;
 
-      let currentVideoIndex = 0;
-      let activeVideo = originalVideos[0]; // Video pertama
-      let isAnimating = false;
+        // Function to slide and toggle videos secara Infinite
+        function switchVideo(direction) {
+          if (isAnimating) return;
 
-      // Function to slide and toggle videos secara Infinite
-      function switchVideo(direction) {
-        if (isAnimating) return;
+          isAnimating = true;
+          let previousVideo = activeVideo;
 
-        isAnimating = true;
-        let previousVideo = activeVideo;
+          if (direction === "next") {
+            currentVideoIndex = (currentVideoIndex + 1) % originalVideos.length;
+            activeVideo = originalVideos[currentVideoIndex];
 
-        if (direction === 'next') {
-          currentVideoIndex = (currentVideoIndex + 1) % originalVideos.length;
-          activeVideo = originalVideos[currentVideoIndex];
+            const wasPaused = previousVideo.paused;
+            const currentVolume = previousVideo.volume;
+            const currentMuted = previousVideo.muted;
 
-          const wasPaused = previousVideo.paused;
-          const currentVolume = previousVideo.volume;
-          const currentMuted = previousVideo.muted;
+            // Geser track ke kiri (menyambung ke video selanjutnya yang ada di kanan)
+            videoTrack.style.transition = "transform 0.6s ease-in-out";
+            videoTrack.style.transform = "translateX(-100%)";
 
-          // Geser track ke kiri (menyambung ke video selanjutnya yang ada di kanan)
-          videoTrack.style.transition = 'transform 0.6s ease-in-out';
-          videoTrack.style.transform = 'translateX(-100%)';
+            // Sinkronisasi status video selanjutnya
+            activeVideo.currentTime = 0;
+            activeVideo.volume = currentVolume;
+            activeVideo.muted = currentMuted;
 
-          // Sinkronisasi status video selanjutnya
-          activeVideo.currentTime = 0;
-          activeVideo.volume = currentVolume;
-          activeVideo.muted = currentMuted;
+            if (!wasPaused) {
+              activeVideo.play().catch((e) => console.log(e));
+              playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            }
 
-          if (!wasPaused) {
-            activeVideo.play().catch(e => console.log(e));
+            setTimeout(() => {
+              // INFINITE LOOP: Pindahkan element kotak video paling kiri ke ujung kanan tumpukan
+              videoTrack.appendChild(videoTrack.firstElementChild);
+
+              // Instan reset balik posisi track agar seolah-olah tidak pernah bergeser
+              videoTrack.style.transition = "none";
+              videoTrack.style.transform = "translateX(0)";
+
+              if (previousVideo !== activeVideo) {
+                previousVideo.pause();
+              }
+              isAnimating = false;
+            }, 600); // 600ms persis sama dengan durasi transisi CSS
+          } else if (direction === "prev") {
+            currentVideoIndex =
+              (currentVideoIndex - 1 + originalVideos.length) %
+              originalVideos.length;
+            activeVideo = originalVideos[currentVideoIndex];
+
+            const wasPaused = previousVideo.paused;
+            const currentVolume = previousVideo.volume;
+            const currentMuted = previousVideo.muted;
+
+            // INFINITE LOOP: Pindahkan sekejap element kotak video yang di paling ujung kanan tumpukan menjadi di sebelah kiri
+            videoTrack.insertBefore(
+              videoTrack.lastElementChild,
+              videoTrack.firstElementChild,
+            );
+
+            // Instan mereset posisi track agar bergeser ke kiri satu frame (menyembunyikan yang baru digeser tadi)
+            videoTrack.style.transition = "none";
+            videoTrack.style.transform = "translateX(-100%)";
+
+            // Memaksa browser mengkomputasi reflow sebelum animasi berjalan
+            void videoTrack.offsetWidth;
+
+            // Transisi halus bergerak dari kiri (-100%) menengahkan (0)
+            videoTrack.style.transition = "transform 0.6s ease-in-out";
+            videoTrack.style.transform = "translateX(0)";
+
+            activeVideo.currentTime = 0;
+            activeVideo.volume = currentVolume;
+            activeVideo.muted = currentMuted;
+
+            if (!wasPaused) {
+              activeVideo.play().catch((e) => console.log(e));
+              playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+
+            setTimeout(() => {
+              if (previousVideo !== activeVideo) {
+                previousVideo.pause();
+              }
+              isAnimating = false;
+            }, 600);
+          }
+        }
+
+        // Next Video Handler
+        nextVideoBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          switchVideo("next");
+        });
+
+        // Previous Video Handler
+        prevVideoBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          switchVideo("prev");
+        });
+
+        // Format time correctly
+        function formatTime(seconds) {
+          const min = Math.floor(seconds / 60);
+          const sec = Math.floor(seconds % 60);
+          return `${min}:${sec < 10 ? "0" : ""}${sec}`;
+        }
+
+        // Gabungkan event listeners universal ke SEMUA objek video
+        originalVideos.forEach((vid) => {
+          vid.addEventListener("ended", () => {
+            if (vid === activeVideo) switchVideo("next");
+          });
+
+          vid.addEventListener("timeupdate", () => {
+            if (vid === activeVideo) {
+              timeDisplay.textContent = formatTime(vid.currentTime);
+              if (vid.duration) {
+                const progressPercent = (vid.currentTime / vid.duration) * 100;
+                progressSlider.value = progressPercent;
+                progressBarFill.style.width = `${progressPercent}%`;
+              }
+            }
+          });
+
+          vid.addEventListener("loadedmetadata", () => {
+            if (vid === activeVideo) {
+              timeDisplay.textContent = formatTime(vid.currentTime);
+            }
+          });
+
+          // On video click, toggle play context
+          vid.addEventListener("click", () => playBtn.click());
+        });
+
+        // Play / Pause toggle on active Video
+        playBtn.addEventListener("click", () => {
+          if (activeVideo.paused) {
+            activeVideo.play();
+            playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+          } else {
+            activeVideo.pause();
+            playBtn.innerHTML = '<i class="fas fa-play"></i>';
+          }
+        });
+
+        // Seek video
+        progressSlider.addEventListener("input", (e) => {
+          const seekTime = (e.target.value / 100) * activeVideo.duration;
+          activeVideo.currentTime = seekTime;
+          progressBarFill.style.width = `${e.target.value}%`;
+        });
+
+        // Volume toggle (mute/unmute)
+        volumeBtn.addEventListener("click", () => {
+          if (activeVideo.muted || activeVideo.volume === 0) {
+            originalVideos.forEach((v) => {
+              v.muted = false;
+              v.volume = volumeSlider.value > 0 ? volumeSlider.value : 1;
+            });
+            volumeSlider.value = activeVideo.volume;
+            updateVolumeIcon();
+          } else {
+            originalVideos.forEach((v) => {
+              v.muted = true;
+            });
+            volumeSlider.value = 0;
+            updateVolumeIcon();
+          }
+        });
+
+        // Volume change via slider
+        volumeSlider.addEventListener("input", (e) => {
+          originalVideos.forEach((v) => {
+            v.volume = e.target.value;
+            v.muted = e.target.value == 0;
+          });
+          updateVolumeIcon();
+        });
+
+        function updateVolumeIcon() {
+          if (activeVideo.muted || activeVideo.volume === 0) {
+            volumeBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+          } else if (activeVideo.volume < 0.5) {
+            volumeBtn.innerHTML = '<i class="fas fa-volume-down"></i>';
+          } else {
+            volumeBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+          }
+        }
+
+        // Optional: hide controls when idle
+        let hideControlsTimeout;
+        function showControls() {
+          customVideoWrapper.classList.add("active");
+          clearTimeout(hideControlsTimeout);
+          if (!activeVideo.paused) {
+            hideControlsTimeout = setTimeout(() => {
+              customVideoWrapper.classList.remove("active");
+            }, 3000);
+          }
+        }
+
+        customVideoWrapper.addEventListener("mousemove", showControls);
+        customVideoWrapper.addEventListener("mouseleave", () => {
+          if (!activeVideo.paused)
+            customVideoWrapper.classList.remove("active");
+        });
+
+        originalVideos.forEach((v) => {
+          v.addEventListener("pause", showControls);
+          v.addEventListener("play", showControls);
+        });
+
+        // Keyboard shortcut: Spacebar to play/pause (Hanya aktif di Desktop)
+        window.addEventListener(
+          "keydown",
+          (e) => {
+            // Cek jika layar ukuran desktop (992px ke atas)
+            if (window.innerWidth >= 992) {
+              // Kode key 32 atau tombol spasi
+              if (e.keyCode === 32 || e.code === "Space" || e.key === " ") {
+                const activeTag = document.activeElement
+                  ? document.activeElement.tagName
+                  : "";
+                // Pastikan user tidak sedang mengetik di input search atau form
+                if (activeTag !== "INPUT" && activeTag !== "TEXTAREA") {
+                  e.preventDefault(); // Mencegah scroll ke bawah
+                  e.stopPropagation(); // Mencegah event ditangkap oleh elemen lain
+                  playBtn.click(); // Jalankan fungsi play/pause
+                }
+              }
+            }
+          },
+          { capture: true, passive: false },
+        );
+
+        // Update button icon on load if autoplay is working
+        setTimeout(() => {
+          if (!activeVideo.paused) {
             playBtn.innerHTML = '<i class="fas fa-pause"></i>';
           }
-
-          setTimeout(() => {
-            // INFINITE LOOP: Pindahkan element kotak video paling kiri ke ujung kanan tumpukan
-            videoTrack.appendChild(videoTrack.firstElementChild);
-
-            // Instan reset balik posisi track agar seolah-olah tidak pernah bergeser
-            videoTrack.style.transition = 'none';
-            videoTrack.style.transform = 'translateX(0)';
-
-            if (previousVideo !== activeVideo) {
-              previousVideo.pause();
-            }
-            isAnimating = false;
-          }, 600); // 600ms persis sama dengan durasi transisi CSS
-
-        } else if (direction === 'prev') {
-          currentVideoIndex = (currentVideoIndex - 1 + originalVideos.length) % originalVideos.length;
-          activeVideo = originalVideos[currentVideoIndex];
-
-          const wasPaused = previousVideo.paused;
-          const currentVolume = previousVideo.volume;
-          const currentMuted = previousVideo.muted;
-
-          // INFINITE LOOP: Pindahkan sekejap element kotak video yang di paling ujung kanan tumpukan menjadi di sebelah kiri
-          videoTrack.insertBefore(videoTrack.lastElementChild, videoTrack.firstElementChild);
-
-          // Instan mereset posisi track agar bergeser ke kiri satu frame (menyembunyikan yang baru digeser tadi)
-          videoTrack.style.transition = 'none';
-          videoTrack.style.transform = 'translateX(-100%)';
-
-          // Memaksa browser mengkomputasi reflow sebelum animasi berjalan
-          void videoTrack.offsetWidth;
-
-          // Transisi halus bergerak dari kiri (-100%) menengahkan (0)
-          videoTrack.style.transition = 'transform 0.6s ease-in-out';
-          videoTrack.style.transform = 'translateX(0)';
-
-          activeVideo.currentTime = 0;
-          activeVideo.volume = currentVolume;
-          activeVideo.muted = currentMuted;
-
-          if (!wasPaused) {
-            activeVideo.play().catch(e => console.log(e));
-            playBtn.innerHTML = '<i class="fas fa-pause"></i>';
-          }
-
-          setTimeout(() => {
-            if (previousVideo !== activeVideo) {
-              previousVideo.pause();
-            }
-            isAnimating = false;
-          }, 600);
-        }
-      }
-
-      // Next Video Handler
-      nextVideoBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        switchVideo('next');
+        }, 500);
       });
+    </script>
 
-      // Previous Video Handler
-      prevVideoBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        switchVideo('prev');
-      });
+    <!-- Scroll to Top Button -->
+    <button
+      id="scrollToTopBtn"
+      class="scroll-to-top"
+      aria-label="Scroll to top"
+    >
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
-      // Format time correctly
-      function formatTime(seconds) {
-        const min = Math.floor(seconds / 60);
-        const sec = Math.floor(seconds % 60);
-        return `${min}:${sec < 10 ? '0' : ''}${sec}`;
-      }
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        const footer = document.querySelector(".footer");
 
-      // Gabungkan event listeners universal ke SEMUA objek video
-      originalVideos.forEach((vid) => {
-        vid.addEventListener('ended', () => {
-          if (vid === activeVideo) switchVideo('next');
-        });
-
-        vid.addEventListener('timeupdate', () => {
-          if (vid === activeVideo) {
-            timeDisplay.textContent = formatTime(vid.currentTime);
-            if (vid.duration) {
-              const progressPercent = (vid.currentTime / vid.duration) * 100;
-              progressSlider.value = progressPercent;
-              progressBarFill.style.width = `${progressPercent}%`;
-            }
-          }
-        });
-
-        vid.addEventListener('loadedmetadata', () => {
-          if (vid === activeVideo) {
-            timeDisplay.textContent = formatTime(vid.currentTime);
-          }
-        });
-
-        // On video click, toggle play context
-        vid.addEventListener('click', () => playBtn.click());
-      });
-
-      // Play / Pause toggle on active Video
-      playBtn.addEventListener('click', () => {
-        if (activeVideo.paused) {
-          activeVideo.play();
-          playBtn.innerHTML = '<i class="fas fa-pause"></i>';
-        } else {
-          activeVideo.pause();
-          playBtn.innerHTML = '<i class="fas fa-play"></i>';
-        }
-      });
-
-      // Seek video
-      progressSlider.addEventListener('input', (e) => {
-        const seekTime = (e.target.value / 100) * activeVideo.duration;
-        activeVideo.currentTime = seekTime;
-        progressBarFill.style.width = `${e.target.value}%`;
-      });
-
-      // Volume toggle (mute/unmute)
-      volumeBtn.addEventListener('click', () => {
-        if (activeVideo.muted || activeVideo.volume === 0) {
-          originalVideos.forEach(v => {
-            v.muted = false;
-            v.volume = volumeSlider.value > 0 ? volumeSlider.value : 1;
-          });
-          volumeSlider.value = activeVideo.volume;
-          updateVolumeIcon();
-        } else {
-          originalVideos.forEach(v => {
-            v.muted = true;
-          });
-          volumeSlider.value = 0;
-          updateVolumeIcon();
-        }
-      });
-
-      // Volume change via slider
-      volumeSlider.addEventListener('input', (e) => {
-        originalVideos.forEach(v => {
-          v.volume = e.target.value;
-          v.muted = e.target.value == 0;
-        });
-        updateVolumeIcon();
-      });
-
-      function updateVolumeIcon() {
-        if (activeVideo.muted || activeVideo.volume === 0) {
-          volumeBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
-        } else if (activeVideo.volume < 0.5) {
-          volumeBtn.innerHTML = '<i class="fas fa-volume-down"></i>';
-        } else {
-          volumeBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
-        }
-      }
-
-      // Optional: hide controls when idle
-      let hideControlsTimeout;
-      function showControls() {
-        customVideoWrapper.classList.add('active');
-        clearTimeout(hideControlsTimeout);
-        if (!activeVideo.paused) {
-          hideControlsTimeout = setTimeout(() => {
-            customVideoWrapper.classList.remove('active');
-          }, 3000);
-        }
-      }
-
-      customVideoWrapper.addEventListener('mousemove', showControls);
-      customVideoWrapper.addEventListener('mouseleave', () => {
-        if (!activeVideo.paused) customVideoWrapper.classList.remove('active');
-      });
-
-      originalVideos.forEach(v => {
-        v.addEventListener('pause', showControls);
-        v.addEventListener('play', showControls);
-      });
-
-      // Keyboard shortcut: Spacebar to play/pause (Hanya aktif di Desktop)
-      window.addEventListener('keydown', (e) => {
-        // Cek jika layar ukuran desktop (992px ke atas)
-        if (window.innerWidth >= 992) {
-          // Kode key 32 atau tombol spasi
-          if (e.keyCode === 32 || e.code === 'Space' || e.key === ' ') {
-            const activeTag = document.activeElement ? document.activeElement.tagName : '';
-            // Pastikan user tidak sedang mengetik di input search atau form
-            if (activeTag !== 'INPUT' && activeTag !== 'TEXTAREA') {
-              e.preventDefault(); // Mencegah scroll ke bawah
-              e.stopPropagation(); // Mencegah event ditangkap oleh elemen lain
-              playBtn.click(); // Jalankan fungsi play/pause
-            }
-          }
-        }
-      }, { capture: true, passive: false });
-
-      // Update button icon on load if autoplay is working
-      setTimeout(() => {
-        if (!activeVideo.paused) {
-          playBtn.innerHTML = '<i class="fas fa-pause"></i>';
-        }
-      }, 500);
-
-    });
-  </script>
-
-  <!-- Scroll to Top Button -->
-  <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to top">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-      const footer = document.querySelector(".footer");
-
-      window.addEventListener("scroll", function () {
-        if (window.scrollY > 300) {
-          scrollToTopBtn.classList.add("show");
-        } else {
-          scrollToTopBtn.classList.remove("show");
-        }
-
-        // Check if footer is in view
-        if (footer) {
-          const footerRect = footer.getBoundingClientRect();
-          const windowHeight = window.innerHeight;
-          // When top of footer is above the bottom of the viewport
-          if (footerRect.top < windowHeight) {
-            // Calculate how much the footer is visible
-            const visibleFooterHeight = windowHeight - footerRect.top;
-            const isMobile = window.innerWidth <= 768;
-            const offset = isMobile ? -21 : -45;
-            // The button should be strictly above the footer
-            scrollToTopBtn.style.bottom = `${visibleFooterHeight + offset}px`;
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 300) {
+            scrollToTopBtn.classList.add("show");
           } else {
-            // Reset to default fixed bottom position from CSS
-            scrollToTopBtn.style.bottom = "";
+            scrollToTopBtn.classList.remove("show");
           }
-        }
-      });
 
-      scrollToTopBtn.addEventListener("click", function () {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-        });
-      });
-    });
-
-    // Search Box Logic (Ctrl+F behavior)
-    document.addEventListener("DOMContentLoaded", function () {
-      const searchBtn = document.getElementById("searchBtn");
-      const ctrlFBox = document.getElementById("ctrlFBox");
-      const ctrlFInput = document.getElementById("ctrlFInput");
-      const ctrlFNext = document.getElementById("ctrlFNext");
-      const ctrlFPrev = document.getElementById("ctrlFPrev");
-      const ctrlFClose = document.getElementById("ctrlFClose");
-
-      if (searchBtn && ctrlFBox && ctrlFClose) {
-        // Toggle the search box when clicking the magnifying glass
-        searchBtn.addEventListener("click", function (e) {
-          e.preventDefault();
-          if (ctrlFBox.classList.contains("active")) {
-            ctrlFBox.classList.remove("active");
-            clearSearchHighlights();
-            ctrlFInput.value = "";
-          } else {
-            ctrlFBox.classList.add("active");
-            setTimeout(() => ctrlFInput.focus(), 50);
+          // Check if footer is in view
+          if (footer) {
+            const footerRect = footer.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            // When top of footer is above the bottom of the viewport
+            if (footerRect.top < windowHeight) {
+              // Calculate how much the footer is visible
+              const visibleFooterHeight = windowHeight - footerRect.top;
+              const isMobile = window.innerWidth <= 768;
+              const offset = isMobile ? -21 : -45;
+              // The button should be strictly above the footer
+              scrollToTopBtn.style.bottom = `${visibleFooterHeight + offset}px`;
+            } else {
+              // Reset to default fixed bottom position from CSS
+              scrollToTopBtn.style.bottom = "";
+            }
           }
         });
 
-        // Mobile search toggle (same function, applied to mobile button)
-        const searchBtnMobile = document.getElementById("searchBtnMobile");
-        if (searchBtnMobile) {
-          searchBtnMobile.addEventListener("click", function (e) {
+        scrollToTopBtn.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Search Box Logic (Ctrl+F behavior)
+      document.addEventListener("DOMContentLoaded", function () {
+        const searchBtn = document.getElementById("searchBtn");
+        const ctrlFBox = document.getElementById("ctrlFBox");
+        const ctrlFInput = document.getElementById("ctrlFInput");
+        const ctrlFNext = document.getElementById("ctrlFNext");
+        const ctrlFPrev = document.getElementById("ctrlFPrev");
+        const ctrlFClose = document.getElementById("ctrlFClose");
+
+        if (searchBtn && ctrlFBox && ctrlFClose) {
+          // Toggle the search box when clicking the magnifying glass
+          searchBtn.addEventListener("click", function (e) {
             e.preventDefault();
             if (ctrlFBox.classList.contains("active")) {
               ctrlFBox.classList.remove("active");
@@ -1969,615 +2300,696 @@
               setTimeout(() => ctrlFInput.focus(), 50);
             }
           });
-        }
 
-        // Close button
-        ctrlFClose.addEventListener("click", function () {
-          ctrlFBox.classList.remove("active");
-          clearSearchHighlights();
-          ctrlFInput.value = "";
-        });
+          // Mobile search toggle (same function, applied to mobile button)
+          const searchBtnMobile = document.getElementById("searchBtnMobile");
+          if (searchBtnMobile) {
+            searchBtnMobile.addEventListener("click", function (e) {
+              e.preventDefault();
+              if (ctrlFBox.classList.contains("active")) {
+                ctrlFBox.classList.remove("active");
+                clearSearchHighlights();
+                ctrlFInput.value = "";
+              } else {
+                ctrlFBox.classList.add("active");
+                setTimeout(() => ctrlFInput.focus(), 50);
+              }
+            });
+          }
 
-        // Close on pressing Esc
-        window.addEventListener("keydown", function (e) {
-          if (e.key === "Escape" && ctrlFBox.classList.contains("active")) {
+          // Close button
+          ctrlFClose.addEventListener("click", function () {
             ctrlFBox.classList.remove("active");
             clearSearchHighlights();
             ctrlFInput.value = "";
-          }
-        });
-
-        let searchMatches = [];
-        let currentMatchIndex = -1;
-        let lastSearchText = "";
-
-        const clearSearchHighlights = () => {
-          const marks = document.querySelectorAll('mark.search-highlight');
-          marks.forEach(mark => {
-            const parent = mark.parentNode;
-            parent.replaceChild(document.createTextNode(mark.textContent), mark);
-            parent.normalize();
           });
-          searchMatches = [];
-          currentMatchIndex = -1;
-        };
 
-        const performSearch = (backwards = false) => {
-          const text = ctrlFInput.value.toLowerCase();
-          if (!text) {
-            clearSearchHighlights();
-            lastSearchText = "";
-            return;
-          }
+          // Close on pressing Esc
+          window.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && ctrlFBox.classList.contains("active")) {
+              ctrlFBox.classList.remove("active");
+              clearSearchHighlights();
+              ctrlFInput.value = "";
+            }
+          });
 
-          if (text !== lastSearchText) {
-            clearSearchHighlights();
-            lastSearchText = text;
+          let searchMatches = [];
+          let currentMatchIndex = -1;
+          let lastSearchText = "";
 
-            const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
-              acceptNode: function (node) {
-                // Ignore script, style, and the search box itself
-                if (node.parentNode.nodeName === 'SCRIPT' || node.parentNode.nodeName === 'STYLE' || node.parentNode.closest('#ctrlFBox')) {
-                  return NodeFilter.FILTER_REJECT;
+          const clearSearchHighlights = () => {
+            const marks = document.querySelectorAll("mark.search-highlight");
+            marks.forEach((mark) => {
+              const parent = mark.parentNode;
+              parent.replaceChild(
+                document.createTextNode(mark.textContent),
+                mark,
+              );
+              parent.normalize();
+            });
+            searchMatches = [];
+            currentMatchIndex = -1;
+          };
+
+          const performSearch = (backwards = false) => {
+            const text = ctrlFInput.value.toLowerCase();
+            if (!text) {
+              clearSearchHighlights();
+              lastSearchText = "";
+              return;
+            }
+
+            if (text !== lastSearchText) {
+              clearSearchHighlights();
+              lastSearchText = text;
+
+              const walker = document.createTreeWalker(
+                document.body,
+                NodeFilter.SHOW_TEXT,
+                {
+                  acceptNode: function (node) {
+                    // Ignore script, style, and the search box itself
+                    if (
+                      node.parentNode.nodeName === "SCRIPT" ||
+                      node.parentNode.nodeName === "STYLE" ||
+                      node.parentNode.closest("#ctrlFBox")
+                    ) {
+                      return NodeFilter.FILTER_REJECT;
+                    }
+                    return node.nodeValue.toLowerCase().includes(text)
+                      ? NodeFilter.FILTER_ACCEPT
+                      : NodeFilter.FILTER_SKIP;
+                  },
+                },
+              );
+
+              const nodesToProcess = [];
+              let currentNode;
+              while ((currentNode = walker.nextNode())) {
+                nodesToProcess.push(currentNode);
+              }
+
+              nodesToProcess.forEach((node) => {
+                const regex = new RegExp(text, "gi");
+                const string = node.nodeValue;
+                let match;
+                let lastIndex = 0;
+                const fragment = document.createDocumentFragment();
+
+                while ((match = regex.exec(string)) !== null) {
+                  // Text before match
+                  fragment.appendChild(
+                    document.createTextNode(
+                      string.slice(lastIndex, match.index),
+                    ),
+                  );
+
+                  // Match wrapped in mark
+                  const mark = document.createElement("mark");
+                  mark.className = "search-highlight";
+                  mark.textContent = match[0];
+                  fragment.appendChild(mark);
+
+                  searchMatches.push(mark);
+                  lastIndex = regex.lastIndex;
                 }
-                return node.nodeValue.toLowerCase().includes(text) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+                // Text after last match
+                fragment.appendChild(
+                  document.createTextNode(string.slice(lastIndex)),
+                );
+
+                node.parentNode.replaceChild(fragment, node);
+              });
+            }
+
+            if (searchMatches.length > 0) {
+              if (currentMatchIndex >= 0) {
+                searchMatches[currentMatchIndex].classList.remove("active");
               }
-            });
 
-            const nodesToProcess = [];
-            let currentNode;
-            while (currentNode = walker.nextNode()) {
-              nodesToProcess.push(currentNode);
-            }
-
-            nodesToProcess.forEach(node => {
-              const regex = new RegExp(text, 'gi');
-              const string = node.nodeValue;
-              let match;
-              let lastIndex = 0;
-              const fragment = document.createDocumentFragment();
-
-              while ((match = regex.exec(string)) !== null) {
-                // Text before match
-                fragment.appendChild(document.createTextNode(string.slice(lastIndex, match.index)));
-
-                // Match wrapped in mark
-                const mark = document.createElement('mark');
-                mark.className = 'search-highlight';
-                mark.textContent = match[0];
-                fragment.appendChild(mark);
-
-                searchMatches.push(mark);
-                lastIndex = regex.lastIndex;
+              if (backwards) {
+                currentMatchIndex =
+                  currentMatchIndex <= 0
+                    ? searchMatches.length - 1
+                    : currentMatchIndex - 1;
+              } else {
+                currentMatchIndex =
+                  currentMatchIndex >= searchMatches.length - 1
+                    ? 0
+                    : currentMatchIndex + 1;
               }
-              // Text after last match
-              fragment.appendChild(document.createTextNode(string.slice(lastIndex)));
 
-              node.parentNode.replaceChild(fragment, node);
-            });
-          }
+              const activeMark = searchMatches[currentMatchIndex];
+              activeMark.classList.add("active");
 
-          if (searchMatches.length > 0) {
-            if (currentMatchIndex >= 0) {
-              searchMatches[currentMatchIndex].classList.remove('active');
+              // Scroll to element with some offset
+              const rect = activeMark.getBoundingClientRect();
+              window.scrollTo({
+                top: window.scrollY + rect.top - 150,
+                behavior: "smooth",
+              });
             }
+          };
 
-            if (backwards) {
-              currentMatchIndex = currentMatchIndex <= 0 ? searchMatches.length - 1 : currentMatchIndex - 1;
-            } else {
-              currentMatchIndex = currentMatchIndex >= searchMatches.length - 1 ? 0 : currentMatchIndex + 1;
+          // When input changes, trigger search automatically
+          ctrlFInput.addEventListener("input", function () {
+            performSearch(false);
+          });
+
+          ctrlFNext.addEventListener("click", () => performSearch(false));
+          ctrlFPrev.addEventListener("click", () => performSearch(true));
+
+          // Let user press Enter to find next, Shift+Enter to find previous
+          ctrlFInput.addEventListener("keydown", function (e) {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              performSearch(e.shiftKey);
             }
+          });
+        }
+      });
 
-            const activeMark = searchMatches[currentMatchIndex];
-            activeMark.classList.add('active');
-
-            // Scroll to element with some offset
-            const rect = activeMark.getBoundingClientRect();
-            window.scrollTo({
-              top: window.scrollY + rect.top - 150,
-              behavior: 'smooth'
-            });
-          }
-        };
-
-        // When input changes, trigger search automatically
-        ctrlFInput.addEventListener("input", function () {
-          performSearch(false);
-        });
-
-        ctrlFNext.addEventListener("click", () => performSearch(false));
-        ctrlFPrev.addEventListener("click", () => performSearch(true));
-
-        // Let user press Enter to find next, Shift+Enter to find previous
-        ctrlFInput.addEventListener("keydown", function (e) {
-          if (e.key === "Enter") {
-            e.preventDefault();
-            performSearch(e.shiftKey);
-          }
-        });
-      }
-    });
-
-    // Spacebar play/pause specifically for desktop
-    document.addEventListener("keydown", function (e) {
-      if (window.innerWidth >= 992) {
-        if (e.target.tagName.toLowerCase() !== 'input' && e.target.tagName.toLowerCase() !== 'textarea') {
-          if (e.code === "Space" || e.key === " ") {
-            e.preventDefault();
-            const playPauseBtn = document.getElementById("playPauseBtn");
-            if (playPauseBtn) {
-              playPauseBtn.click();
-            } else {
-              const videos = document.querySelectorAll("video");
-              videos.forEach(v => v.paused ? v.play() : v.pause());
+      // Spacebar play/pause specifically for desktop
+      document.addEventListener("keydown", function (e) {
+        if (window.innerWidth >= 992) {
+          if (
+            e.target.tagName.toLowerCase() !== "input" &&
+            e.target.tagName.toLowerCase() !== "textarea"
+          ) {
+            if (e.code === "Space" || e.key === " ") {
+              e.preventDefault();
+              const playPauseBtn = document.getElementById("playPauseBtn");
+              if (playPauseBtn) {
+                playPauseBtn.click();
+              } else {
+                const videos = document.querySelectorAll("video");
+                videos.forEach((v) => (v.paused ? v.play() : v.pause()));
+              }
             }
           }
         }
-      }
-    });
-  </script>
-
-  <!-- ===== SERVICE VIDEO CAROUSEL SCRIPT ===== -->
-  <script>
-  (function () {
-    /* --------------------------------------------------
-       1. DATA — video list per service
-    -------------------------------------------------- */
-    const SERVICE_DATA = {
-      '3d-animation': {
-        label: '3D ANIMATION &\nVISUAL CONTENT',
-        videos: [
-          'videos/3d Animation & Visual Content/3d animation 1.mp4',
-          'videos/3d Animation & Visual Content/3d animation 2.mp4',
-          'videos/3d Animation & Visual Content/3d animation 3.mp4',
-        ]
-      },
-      'launch-gimmick': {
-        label: 'LAUNCH GIMMICKS &\nSPECIAL EFFECTS',
-        videos: [
-          'videos/Launch Gimmick & Special Effect/launch gimmick 1.mp4',
-          'videos/Launch Gimmick & Special Effect/launch gimmick 2.mp4',
-          'videos/Launch Gimmick & Special Effect/launch gimmick 3.mp4',
-        ]
-      },
-      'corporate-video': {
-        label: 'CORPORATE VIDEO\nPRODUCTION',
-        videos: [
-          'videos/Corporate Video Production/corporate video.mp4'
-        ]
-      },
-      'event-tech': {
-        label: 'EVENT TECHNOLOGY\nINTEGRATION',
-        videos: [
-          'videos/Event Technology Integration/Event Technology Integration rev 1.mp4',
-          'videos/Event Technology Integration/Event Technology Integration rev 2.mp4',
-          'videos/Event Technology Integration/Event Technology Integration rev 3.mp4',
-        ]
-      }
-    };
-
-    /* --------------------------------------------------
-       2. DOM references
-    -------------------------------------------------- */
-    const track       = document.getElementById('svcCarouselTrack');
-    const dotsEl      = document.getElementById('svcDots');
-    const prevBtn     = document.getElementById('svcPrevBtn');
-    const nextBtn     = document.getElementById('svcNextBtn');
-    const fadeOverlay = document.getElementById('svcFadeOverlay');
-    const tabItems    = document.querySelectorAll('.service-tab-item');
-
-    let currentService  = '3d-animation';
-    let realIndex       = 0;   // 0-based index into actual video list
-    let domIndex        = 1;   // index in DOM (offset by 1 because of leading clone)
-    let totalReal       = 0;   // number of real videos
-    let isAnimating     = false;
-    let isTransitioning = false;
-
-    const GAP = 20; // px gap between cards, must match CSS
-
-    // Flatten SERVICE_DATA into a single array
-    const ALL_VIDEOS = [];
-    Object.keys(SERVICE_DATA).forEach(key => {
-      const data = SERVICE_DATA[key];
-      data.videos.forEach(src => {
-        ALL_VIDEOS.push({
-          src: src,
-          label: data.label,
-          serviceKey: key
-        });
       });
-    });
+    </script>
 
-    /* --------------------------------------------------
-       3. Create one card element
-    -------------------------------------------------- */
-    function makeCard(src, label, realIdx) {
-      const card = document.createElement('div');
-      card.className = 'svc-card';
-      card.dataset.realIndex = realIdx;
+    <!-- ===== SERVICE VIDEO CAROUSEL SCRIPT ===== -->
+    <script>
+      (function () {
+        /* --------------------------------------------------
+         1. DATA — video list per service
+      -------------------------------------------------- */
+        const SERVICE_DATA = {
+          "3d-animation": {
+            label: "3D ANIMATION &\nVISUAL CONTENT",
+            videos: [
+              "videos/3d Animation & Visual Content/3d animation 1.mp4",
+              "videos/3d Animation & Visual Content/3d animation 2.mp4",
+              "videos/3d Animation & Visual Content/3d animation 3.mp4",
+            ],
+          },
+          "launch-gimmick": {
+            label: "LAUNCH GIMMICKS &\nSPECIAL EFFECTS",
+            videos: [
+              "videos/Launch Gimmick & Special Effect/launch gimmick 1.mp4",
+              "videos/Launch Gimmick & Special Effect/launch gimmick 2.mp4",
+              "videos/Launch Gimmick & Special Effect/launch gimmick 3.mp4",
+            ],
+          },
+          "corporate-video": {
+            label: "CORPORATE VIDEO\nPRODUCTION",
+            videos: ["videos/Corporate Video Production/corporate video.mp4"],
+          },
+          "event-tech": {
+            label: "EVENT TECHNOLOGY\nINTEGRATION",
+            videos: [
+              "videos/Event Technology Integration/Event Technology Integration rev 1.mp4",
+              "videos/Event Technology Integration/Event Technology Integration rev 2.mp4",
+              "videos/Event Technology Integration/Event Technology Integration rev 3.mp4",
+            ],
+          },
+        };
 
-      const vid = document.createElement('video');
-      vid.src = src;
-      vid.muted = true;
-      vid.loop = false; // changed loop to false so ended element can be triggered
-      vid.playsInline = true;
-      vid.preload = 'metadata';
-      vid.disablePictureInPicture = true;
+        /* --------------------------------------------------
+         2. DOM references
+      -------------------------------------------------- */
+        const track = document.getElementById("svcCarouselTrack");
+        const dotsEl = document.getElementById("svcDots");
+        const prevBtn = document.getElementById("svcPrevBtn");
+        const nextBtn = document.getElementById("svcNextBtn");
+        const fadeOverlay = document.getElementById("svcFadeOverlay");
+        const tabItems = document.querySelectorAll(".service-tab-item");
 
-      const labelEl = document.createElement('div');
-      labelEl.className = 'svc-card-label';
-      labelEl.innerHTML = label.replace('\n', '<br>');
+        let currentService = "3d-animation";
+        let realIndex = 0; // 0-based index into actual video list
+        let domIndex = 1; // index in DOM (offset by 1 because of leading clone)
+        let totalReal = 0; // number of real videos
+        let isAnimating = false;
+        let isTransitioning = false;
 
-      const wm = document.createElement('img');
-      wm.className = 'svc-card-watermark';
-      
+        const GAP = 20; // px gap between cards, must match CSS
+        const DESKTOP_TRANSITION =
+          "transform 0.55s cubic-bezier(0.4, 0, 0.2, 1)";
+        const MOBILE_TRANSITION =
+          "transform 0.75s cubic-bezier(0.4, 0, 0.2, 1)";
+        const getCarouselTransition = () =>
+          window.matchMedia("(max-width: 991px)").matches
+            ? MOBILE_TRANSITION
+            : DESKTOP_TRANSITION;
 
-      // Controls setup
-      const controls = document.createElement('div');
-      controls.className = 'svc-controls';
-      controls.innerHTML = `
+        // Flatten SERVICE_DATA into a single array
+        const ALL_VIDEOS = [];
+        Object.keys(SERVICE_DATA).forEach((key) => {
+          const data = SERVICE_DATA[key];
+          data.videos.forEach((src) => {
+            ALL_VIDEOS.push({
+              src: src,
+              label: data.label,
+              serviceKey: key,
+            });
+          });
+        });
+
+        /* --------------------------------------------------
+         3. Create one card element
+      -------------------------------------------------- */
+        function makeCard(src, label, realIdx) {
+          const card = document.createElement("div");
+          card.className = "svc-card";
+          card.dataset.realIndex = realIdx;
+
+          const vid = document.createElement("video");
+          vid.src = src;
+          vid.muted = true;
+          vid.loop = false; // changed loop to false so ended element can be triggered
+          vid.playsInline = true;
+          vid.preload = "metadata";
+          vid.disablePictureInPicture = true;
+
+          const labelEl = document.createElement("div");
+          labelEl.className = "svc-card-label";
+          labelEl.innerHTML = label.replace("\n", "<br>");
+
+          const wm = document.createElement("img");
+          wm.className = "svc-card-watermark";
+
+          // Controls setup
+          const controls = document.createElement("div");
+          controls.className = "svc-controls";
+          controls.innerHTML = `
         <button class="svc-play-pause"><i class="fas fa-pause"></i></button>
         <span class="svc-time">0:00</span>
         <input type="range" class="svc-progress" value="0" min="0" step="0.1">
         <button class="svc-volume"><i class="fas fa-volume-mute"></i></button>
       `;
 
-      card.appendChild(vid);
-      card.appendChild(controls);
-      card.appendChild(labelEl);
-      card.appendChild(wm);
+          card.appendChild(vid);
+          card.appendChild(controls);
+          card.appendChild(labelEl);
+          card.appendChild(wm);
 
-      const playPauseBtn = controls.querySelector('.svc-play-pause');
-      const timeDisplay = controls.querySelector('.svc-time');
-      const progressBar = controls.querySelector('.svc-progress');
-      const volumeBtn = controls.querySelector('.svc-volume');
+          const playPauseBtn = controls.querySelector(".svc-play-pause");
+          const timeDisplay = controls.querySelector(".svc-time");
+          const progressBar = controls.querySelector(".svc-progress");
+          const volumeBtn = controls.querySelector(".svc-volume");
 
-      const formatTime = (time) => {
-        if (!time || isNaN(time)) return "0:00";
-        const m = Math.floor(time / 60);
-        const s = Math.floor(time % 60);
-        return `${m}:${s < 10 ? '0' : ''}${s}`;
-      };
+          const formatTime = (time) => {
+            if (!time || isNaN(time)) return "0:00";
+            const m = Math.floor(time / 60);
+            const s = Math.floor(time % 60);
+            return `${m}:${s < 10 ? "0" : ""}${s}`;
+          };
 
-      const togglePlay = (e) => {
-        if (card.classList.contains('center')) {
-          if (e) e.stopPropagation();
-          if (vid.paused) vid.play();
-          else vid.pause();
-        }
-      };
-
-      playPauseBtn.addEventListener('click', togglePlay);
-      vid.addEventListener('click', togglePlay);
-
-      vid.addEventListener('play', () => playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>');
-      vid.addEventListener('pause', () => playPauseBtn.innerHTML = '<i class="fas fa-play"></i>');
-      
-      // Auto-next when video finishes
-      vid.addEventListener('ended', () => {
-        if (card.classList.contains('center')) {
-          stepNext();
-        }
-      });
-
-      vid.addEventListener('loadedmetadata', () => {
-        progressBar.max = vid.duration;
-      });
-
-      vid.addEventListener('timeupdate', () => {
-        timeDisplay.textContent = formatTime(vid.currentTime);
-        progressBar.value = vid.currentTime;
-      });
-
-      progressBar.addEventListener('input', (e) => {
-        e.stopPropagation();
-        vid.currentTime = progressBar.value;
-      });
-      progressBar.addEventListener('mousedown', (e) => e.stopPropagation());
-      progressBar.addEventListener('touchstart', (e) => e.stopPropagation());
-
-      volumeBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        vid.muted = !vid.muted;
-        volumeBtn.innerHTML = vid.muted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
-      });
-
-      return card;
-    }
-
-    /* --------------------------------------------------
-       4. Build carousel — with leading + trailing clones
-          DOM layout: [clone_last] [v0] [v1] ... [vN] [clone_first]
-          domIndex starts at 1 (pointing to real v0)
-    -------------------------------------------------- */
-    function buildCarousel() {
-      totalReal = ALL_VIDEOS.length;
-      realIndex = 0;
-      domIndex  = 1;  // real card 0 is at DOM index 1 (after leading clone)
-
-      track.innerHTML = '';
-      dotsEl.innerHTML = '';
-
-      // Show/hide nav buttons
-      const showNav = totalReal > 1;
-      prevBtn.style.display = showNav ? '' : 'none';
-      nextBtn.style.display = showNav ? '' : 'none';
-
-      // --- Leading clone: clone of last real video ---
-      const lastVid = ALL_VIDEOS[totalReal - 1];
-      const leadClone = makeCard(lastVid.src, lastVid.label, totalReal - 1);
-      leadClone.dataset.clone = 'lead';
-      track.appendChild(leadClone);
-
-      // --- Real cards ---
-      ALL_VIDEOS.forEach((item, i) => {
-        const card = makeCard(item.src, item.label, i);
-        // Clicking a side card navigates to it
-        card.addEventListener('click', () => {
-          const ri = parseInt(card.dataset.realIndex);
-          if (ri !== realIndex) goTo(ri, true);
-        });
-        track.appendChild(card);
-
-        // Dot (only for real cards)
-        const dot = document.createElement('div');
-        dot.className = 'svc-dot';
-        dot.dataset.realIndex = i;
-        dot.addEventListener('click', () => goTo(i, true));
-        dotsEl.appendChild(dot);
-      });
-
-      // --- Trailing clone: clone of first real video ---
-      const firstVid = ALL_VIDEOS[0];
-      const trailClone = makeCard(firstVid.src, firstVid.label, 0);
-      trailClone.dataset.clone = 'trail';
-      track.appendChild(trailClone);
-
-      // Initial position without animation
-      applyLayout(false);
-    }
-
-    /* --------------------------------------------------
-       5. Calculate translateX so DOM card at domIndex
-          is centered in the wrapper
-    -------------------------------------------------- */
-    function calcTranslateX(targetDomIdx) {
-      const cards = Array.from(track.children);
-      const wrapperW = track.parentElement.offsetWidth;
-      let offset = 0;
-      cards.forEach((card, i) => {
-        if (i < targetDomIdx) {
-          offset += card.offsetWidth + GAP;
-        } else if (i === targetDomIdx) {
-          offset += card.offsetWidth / 2;
-        }
-      });
-      return wrapperW / 2 - offset;
-    }
-
-    /* --------------------------------------------------
-       6. Apply layout — update classes, dots, play/pause
-    -------------------------------------------------- */
-    function applyLayout(animate) {
-      const cards = Array.from(track.children);
-
-      cards.forEach((card, i) => {
-        const vid = card.querySelector('video');
-        const isCenter = i === domIndex;
-        card.className = 'svc-card ' + (isCenter ? 'center' : 'side');
-        if (isCenter) {
-          vid.play().catch(() => {});
-        } else {
-          vid.pause();
-        }
-      });
-
-      // Update dots based on realIndex
-      Array.from(dotsEl.querySelectorAll('.svc-dot')).forEach((d, i) => {
-        d.classList.toggle('active', i === realIndex);
-      });
-
-      // Update active tab based on realIndex serviceKey
-      const currentVideoObj = ALL_VIDEOS[realIndex];
-      if (currentVideoObj) {
-        currentService = currentVideoObj.serviceKey;
-        tabItems.forEach(t => {
-          t.classList.toggle('active', t.dataset.service === currentService);
-          t.setAttribute('aria-pressed', t.dataset.service === currentService ? 'true' : 'false');
-        });
-      }
-
-      // Move track
-      track.style.transition = animate
-        ? 'transform 0.55s cubic-bezier(0.4, 0, 0.2, 1)'
-        : 'none';
-
-      requestAnimationFrame(() => {
-        track.style.transform = `translateX(${calcTranslateX(domIndex)}px)`;
-      });
-    }
-
-    /* --------------------------------------------------
-       7. Navigate to a real video index
-    -------------------------------------------------- */
-    function goTo(targetRealIdx, withAnim) {
-      if (isAnimating) return;
-      realIndex = ((targetRealIdx % totalReal) + totalReal) % totalReal;
-      domIndex  = realIndex + 1;  // offset by 1 for leading clone
-      applyLayout(withAnim !== false);
-    }
-
-    /* --------------------------------------------------
-       8. Infinite loop via clones
-          After animating to a clone, instantly snap to
-          the matching real card without transition.
-    -------------------------------------------------- */
-    function stepNext() {
-      if (isAnimating) return;
-      isAnimating = true;
-
-      // Animate to the next DOM slot
-      const nextDom = domIndex + 1;
-      track.style.transition = 'transform 0.55s cubic-bezier(0.4, 0, 0.2, 1)';
-      requestAnimationFrame(() => {
-        track.style.transform = `translateX(${calcTranslateX(nextDom)}px)`;
-      });
-
-      // After animation ends, update state
-      track.addEventListener('transitionend', function handler() {
-        track.removeEventListener('transitionend', handler);
-
-        domIndex = nextDom;
-        // Check if we landed on trailing clone → snap to real card 0
-        if (domIndex >= totalReal + 1) {
-          realIndex = 0;
-          domIndex  = 1;
-        } else {
-          realIndex = domIndex - 1;
-        }
-
-        applyLayout(false);   // snap without animation
-        isAnimating = false;
-      });
-
-      // Update dots immediately for snappy feel
-      realIndex = (domIndex) % totalReal;  // preview
-      Array.from(dotsEl.querySelectorAll('.svc-dot')).forEach((d, i) => {
-        d.classList.toggle('active', i === realIndex);
-      });
-      
-      const prevVideoObj = ALL_VIDEOS[realIndex];
-      if (prevVideoObj) {
-        currentService = prevVideoObj.serviceKey;
-        tabItems.forEach(t => {
-          t.classList.toggle('active', t.dataset.service === currentService);
-          t.setAttribute('aria-pressed', t.dataset.service === currentService ? 'true' : 'false');
-        });
-      }
-    }
-
-    function stepPrev() {
-      if (isAnimating) return;
-      isAnimating = true;
-
-      const prevDom = domIndex - 1;
-      track.style.transition = 'transform 0.55s cubic-bezier(0.4, 0, 0.2, 1)';
-      requestAnimationFrame(() => {
-        track.style.transform = `translateX(${calcTranslateX(prevDom)}px)`;
-      });
-
-      track.addEventListener('transitionend', function handler() {
-        track.removeEventListener('transitionend', handler);
-
-        domIndex = prevDom;
-        // Check if we landed on leading clone → snap to real card N-1
-        if (domIndex <= 0) {
-          realIndex = totalReal - 1;
-          domIndex  = totalReal;
-        } else {
-          realIndex = domIndex - 1;
-        }
-
-        applyLayout(false);
-        isAnimating = false;
-      });
-
-      // Update dots immediately
-      realIndex = ((domIndex - 2) + totalReal) % totalReal;
-      Array.from(dotsEl.querySelectorAll('.svc-dot')).forEach((d, i) => {
-        d.classList.toggle('active', i === realIndex);
-      });
-
-      const prevVideoObj = ALL_VIDEOS[realIndex];
-      if (prevVideoObj) {
-        currentService = prevVideoObj.serviceKey;
-        tabItems.forEach(t => {
-          t.classList.toggle('active', t.dataset.service === currentService);
-          t.setAttribute('aria-pressed', t.dataset.service === currentService ? 'true' : 'false');
-        });
-      }
-    }
-
-    /* --------------------------------------------------
-       9. Button events
-    -------------------------------------------------- */
-    nextBtn.addEventListener('click', stepNext);
-    prevBtn.addEventListener('click', stepPrev);
-
-    // Spacebar to play/pause center video
-    document.addEventListener('keydown', (e) => {
-      if (e.code === 'Space' || e.key === ' ') {
-        const centerCard = track.querySelector('.svc-card.center');
-        if (centerCard) {
-          // Verify if user is not typing in an input
-          if(e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
-            e.preventDefault();
-            const vid = centerCard.querySelector('video');
-            if (vid) {
+          const togglePlay = (e) => {
+            if (card.classList.contains("center")) {
+              if (e) e.stopPropagation();
               if (vid.paused) vid.play();
               else vid.pause();
             }
+          };
+
+          playPauseBtn.addEventListener("click", togglePlay);
+          vid.addEventListener("click", togglePlay);
+
+          vid.addEventListener(
+            "play",
+            () => (playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>'),
+          );
+          vid.addEventListener(
+            "pause",
+            () => (playPauseBtn.innerHTML = '<i class="fas fa-play"></i>'),
+          );
+
+          // Auto-next when video finishes
+          vid.addEventListener("ended", () => {
+            if (card.classList.contains("center")) {
+              stepNext();
+            }
+          });
+
+          vid.addEventListener("loadedmetadata", () => {
+            progressBar.max = vid.duration;
+          });
+
+          vid.addEventListener("timeupdate", () => {
+            timeDisplay.textContent = formatTime(vid.currentTime);
+            progressBar.value = vid.currentTime;
+          });
+
+          progressBar.addEventListener("input", (e) => {
+            e.stopPropagation();
+            vid.currentTime = progressBar.value;
+          });
+          progressBar.addEventListener("mousedown", (e) => e.stopPropagation());
+          progressBar.addEventListener("touchstart", (e) =>
+            e.stopPropagation(),
+          );
+
+          volumeBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            vid.muted = !vid.muted;
+            volumeBtn.innerHTML = vid.muted
+              ? '<i class="fas fa-volume-mute"></i>'
+              : '<i class="fas fa-volume-up"></i>';
+          });
+
+          return card;
+        }
+
+        /* --------------------------------------------------
+         4. Build carousel — with leading + trailing clones
+            DOM layout: [clone_last] [v0] [v1] ... [vN] [clone_first]
+            domIndex starts at 1 (pointing to real v0)
+      -------------------------------------------------- */
+        function buildCarousel() {
+          totalReal = ALL_VIDEOS.length;
+          realIndex = 0;
+          domIndex = 1; // real card 0 is at DOM index 1 (after leading clone)
+
+          track.innerHTML = "";
+          dotsEl.innerHTML = "";
+
+          // Show/hide nav buttons
+          const showNav = totalReal > 1;
+          prevBtn.style.display = showNav ? "" : "none";
+          nextBtn.style.display = showNav ? "" : "none";
+
+          // --- Leading clone: clone of last real video ---
+          const lastVid = ALL_VIDEOS[totalReal - 1];
+          const leadClone = makeCard(lastVid.src, lastVid.label, totalReal - 1);
+          leadClone.dataset.clone = "lead";
+          track.appendChild(leadClone);
+
+          // --- Real cards ---
+          ALL_VIDEOS.forEach((item, i) => {
+            const card = makeCard(item.src, item.label, i);
+            // Clicking a side card navigates to it
+            card.addEventListener("click", () => {
+              const ri = parseInt(card.dataset.realIndex);
+              if (ri !== realIndex) goTo(ri, true);
+            });
+            track.appendChild(card);
+
+            // Dot (only for real cards)
+            const dot = document.createElement("div");
+            dot.className = "svc-dot";
+            dot.dataset.realIndex = i;
+            dot.addEventListener("click", () => goTo(i, true));
+            dotsEl.appendChild(dot);
+          });
+
+          // --- Trailing clone: clone of first real video ---
+          const firstVid = ALL_VIDEOS[0];
+          const trailClone = makeCard(firstVid.src, firstVid.label, 0);
+          trailClone.dataset.clone = "trail";
+          track.appendChild(trailClone);
+
+          // Initial position without animation
+          applyLayout(false);
+        }
+
+        /* --------------------------------------------------
+         5. Calculate translateX so DOM card at domIndex
+            is centered in the wrapper
+      -------------------------------------------------- */
+        function calcTranslateX(targetDomIdx) {
+          const cards = Array.from(track.children);
+          const wrapperW = track.parentElement.offsetWidth;
+          let offset = 0;
+          cards.forEach((card, i) => {
+            if (i < targetDomIdx) {
+              offset += card.offsetWidth + GAP;
+            } else if (i === targetDomIdx) {
+              offset += card.offsetWidth / 2;
+            }
+          });
+          return wrapperW / 2 - offset;
+        }
+
+        /* --------------------------------------------------
+         6. Apply layout — update classes, dots, play/pause
+      -------------------------------------------------- */
+        function applyLayout(animate) {
+          const cards = Array.from(track.children);
+
+          cards.forEach((card, i) => {
+            const vid = card.querySelector("video");
+            const isCenter = i === domIndex;
+            card.className = "svc-card " + (isCenter ? "center" : "side");
+            if (isCenter) {
+              vid.play().catch(() => {});
+            } else {
+              vid.pause();
+            }
+          });
+
+          // Update dots based on realIndex
+          Array.from(dotsEl.querySelectorAll(".svc-dot")).forEach((d, i) => {
+            d.classList.toggle("active", i === realIndex);
+          });
+
+          // Update active tab based on realIndex serviceKey
+          const currentVideoObj = ALL_VIDEOS[realIndex];
+          if (currentVideoObj) {
+            currentService = currentVideoObj.serviceKey;
+            tabItems.forEach((t) => {
+              t.classList.toggle(
+                "active",
+                t.dataset.service === currentService,
+              );
+              t.setAttribute(
+                "aria-pressed",
+                t.dataset.service === currentService ? "true" : "false",
+              );
+            });
+          }
+
+          // Move track
+          track.style.transition = animate ? getCarouselTransition() : "none";
+
+          requestAnimationFrame(() => {
+            track.style.transform = `translateX(${calcTranslateX(domIndex)}px)`;
+          });
+        }
+
+        /* --------------------------------------------------
+         7. Navigate to a real video index
+      -------------------------------------------------- */
+        function goTo(targetRealIdx, withAnim) {
+          if (isAnimating) return;
+          realIndex = ((targetRealIdx % totalReal) + totalReal) % totalReal;
+          domIndex = realIndex + 1; // offset by 1 for leading clone
+          applyLayout(withAnim !== false);
+        }
+
+        /* --------------------------------------------------
+         8. Infinite loop via clones
+            After animating to a clone, instantly snap to
+            the matching real card without transition.
+      -------------------------------------------------- */
+        function stepNext() {
+          if (isAnimating) return;
+          isAnimating = true;
+
+          // Animate to the next DOM slot
+          const nextDom = domIndex + 1;
+          track.style.transition = getCarouselTransition();
+          requestAnimationFrame(() => {
+            track.style.transform = `translateX(${calcTranslateX(nextDom)}px)`;
+          });
+
+          // After animation ends, update state
+          track.addEventListener("transitionend", function handler() {
+            track.removeEventListener("transitionend", handler);
+
+            domIndex = nextDom;
+            // Check if we landed on trailing clone → snap to real card 0
+            if (domIndex >= totalReal + 1) {
+              realIndex = 0;
+              domIndex = 1;
+            } else {
+              realIndex = domIndex - 1;
+            }
+
+            applyLayout(false); // snap without animation
+            isAnimating = false;
+          });
+
+          // Update dots immediately for snappy feel
+          realIndex = domIndex % totalReal; // preview
+          Array.from(dotsEl.querySelectorAll(".svc-dot")).forEach((d, i) => {
+            d.classList.toggle("active", i === realIndex);
+          });
+
+          const prevVideoObj = ALL_VIDEOS[realIndex];
+          if (prevVideoObj) {
+            currentService = prevVideoObj.serviceKey;
+            tabItems.forEach((t) => {
+              t.classList.toggle(
+                "active",
+                t.dataset.service === currentService,
+              );
+              t.setAttribute(
+                "aria-pressed",
+                t.dataset.service === currentService ? "true" : "false",
+              );
+            });
           }
         }
-      }
-    });
 
-    /* --------------------------------------------------
-       10. Service tab switching (jump to index)
-    -------------------------------------------------- */
-    function switchService(serviceKey) {
-      if (serviceKey === currentService) return;
-      
-      // Find the first occurrence of this serviceKey
-      const targetIndex = ALL_VIDEOS.findIndex(v => v.serviceKey === serviceKey);
-      if (targetIndex !== -1) {
-        currentService = serviceKey;
-        
-        // Update tab visuals manually before navigating
-        tabItems.forEach(t => {
-          t.classList.toggle('active', t.dataset.service === currentService);
-          t.setAttribute('aria-pressed', t.dataset.service === currentService ? 'true' : 'false');
-        });
-        
-        goTo(targetIndex, true);
-      }
-    }
+        function stepPrev() {
+          if (isAnimating) return;
+          isAnimating = true;
 
-    tabItems.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const svc = tab.dataset.service;
-        switchService(svc);
-      });
+          const prevDom = domIndex - 1;
+          track.style.transition = getCarouselTransition();
+          requestAnimationFrame(() => {
+            track.style.transform = `translateX(${calcTranslateX(prevDom)}px)`;
+          });
 
-      tab.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          tab.click();
+          track.addEventListener("transitionend", function handler() {
+            track.removeEventListener("transitionend", handler);
+
+            domIndex = prevDom;
+            // Check if we landed on leading clone → snap to real card N-1
+            if (domIndex <= 0) {
+              realIndex = totalReal - 1;
+              domIndex = totalReal;
+            } else {
+              realIndex = domIndex - 1;
+            }
+
+            applyLayout(false);
+            isAnimating = false;
+          });
+
+          // Update dots immediately
+          realIndex = (domIndex - 2 + totalReal) % totalReal;
+          Array.from(dotsEl.querySelectorAll(".svc-dot")).forEach((d, i) => {
+            d.classList.toggle("active", i === realIndex);
+          });
+
+          const prevVideoObj = ALL_VIDEOS[realIndex];
+          if (prevVideoObj) {
+            currentService = prevVideoObj.serviceKey;
+            tabItems.forEach((t) => {
+              t.classList.toggle(
+                "active",
+                t.dataset.service === currentService,
+              );
+              t.setAttribute(
+                "aria-pressed",
+                t.dataset.service === currentService ? "true" : "false",
+              );
+            });
+          }
         }
-      });
-    });
 
-    /* --------------------------------------------------
-       11. Reposition on resize
-    -------------------------------------------------- */
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
-        track.style.transition = 'none';
-        track.style.transform = `translateX(${calcTranslateX(domIndex)}px)`;
-      }, 120);
-    });
+        /* --------------------------------------------------
+         9. Button events
+      -------------------------------------------------- */
+        nextBtn.addEventListener("click", stepNext);
+        prevBtn.addEventListener("click", stepPrev);
 
-    /* --------------------------------------------------
-       12. Init
-    -------------------------------------------------- */
-    buildCarousel();
+        // Spacebar to play/pause center video
+        document.addEventListener("keydown", (e) => {
+          if (e.code === "Space" || e.key === " ") {
+            const centerCard = track.querySelector(".svc-card.center");
+            if (centerCard) {
+              // Verify if user is not typing in an input
+              if (
+                e.target.tagName !== "INPUT" &&
+                e.target.tagName !== "TEXTAREA"
+              ) {
+                e.preventDefault();
+                const vid = centerCard.querySelector("video");
+                if (vid) {
+                  if (vid.paused) vid.play();
+                  else vid.pause();
+                }
+              }
+            }
+          }
+        });
 
-  })();
-  </script>
+        /* --------------------------------------------------
+         10. Service tab switching (jump to index)
+      -------------------------------------------------- */
+        function switchService(serviceKey) {
+          if (serviceKey === currentService) return;
 
+          // Find the first occurrence of this serviceKey
+          const targetIndex = ALL_VIDEOS.findIndex(
+            (v) => v.serviceKey === serviceKey,
+          );
+          if (targetIndex !== -1) {
+            currentService = serviceKey;
 
-</body>
+            // Update tab visuals manually before navigating
+            tabItems.forEach((t) => {
+              t.classList.toggle(
+                "active",
+                t.dataset.service === currentService,
+              );
+              t.setAttribute(
+                "aria-pressed",
+                t.dataset.service === currentService ? "true" : "false",
+              );
+            });
 
+            goTo(targetIndex, true);
+          }
+        }
+
+        tabItems.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            const svc = tab.dataset.service;
+            switchService(svc);
+          });
+
+          tab.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              tab.click();
+            }
+          });
+        });
+
+        /* --------------------------------------------------
+         11. Reposition on resize
+      -------------------------------------------------- */
+        let resizeTimer;
+        window.addEventListener("resize", () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(() => {
+            track.style.transition = "none";
+            track.style.transform = `translateX(${calcTranslateX(domIndex)}px)`;
+          }, 120);
+        });
+
+        /* --------------------------------------------------
+         12. Init
+      -------------------------------------------------- */
+        buildCarousel();
+      })();
+    </script>
+  </body>
 </html>

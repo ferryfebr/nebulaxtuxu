@@ -2273,7 +2273,7 @@
           if (activeVideo.muted || activeVideo.volume === 0) {
             originalVideos.forEach((v) => {
               v.muted = false;
-              v.volume = volumeSlider.value > 0 ? volumeSlider.value : 1;
+              v.volume   = volumeSlider.value > 0 ? volumeSlider.value : 1;
             });
             volumeSlider.value = activeVideo.volume;
             updateVolumeIcon();

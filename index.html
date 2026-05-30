@@ -14,6 +14,12 @@
       rel="stylesheet"
     />
     <link href="fonts/stylesheet.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400&display=swap"
+      rel="stylesheet"
+    />
     <link href="style.css" rel="stylesheet" />
   </head>
 
@@ -261,7 +267,7 @@
           </div>
           <div class="col-lg-8">
             <p>
-              Nebula Ventures Sdn. Bhd., also known as Nebula X, is a is a
+              Nebula Ventures Sdn. Bhd., also known as Nebula X, is a
               creative storytelling and brand experience company shaping how
               ideas, and stories are brought to life.
             </p>
@@ -858,6 +864,94 @@
       </div>
     </section>
 
+    <!-- EXCLUSIVE PROMOTION SECTION -->
+    <section id="promotion" class="about-section scroll-section" aria-label="Exclusive Promotion">
+      <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center">
+            <div class="promotion-wrapper pure-fade-in">
+              <img 
+                src="images/promotion/bgpromotion.png" 
+                alt="Exclusive Promotions" 
+                class="img-fluid promotion-bg-img"
+              />
+              
+              <!-- Video Content (paused preview + play to open modal) -->
+              <div class="promotion-video-container" id="promotionVideoPreview">
+                <video
+                  id="promotionPreviewVideo"
+                  class="promotion-video"
+                  playsinline
+                  preload="metadata"
+                  muted
+                >
+                  <source src="images/promotion/vidpromotion.mp4" type="video/mp4" />
+                </video>
+                <button
+                  type="button"
+                  class="promotion-play-btn"
+                  id="promotionPlayBtn"
+                  aria-label="Play promotion video"
+                >
+                  <i class="fas fa-play" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <!-- Posters carousel -->
+              <div
+                class="promotion-posters-container"
+                id="promotionPostersCarousel"
+              >
+                <div class="promotion-posters-viewport">
+                  <div class="promotion-posters-track" id="promotionPostersTrack">
+                    <button
+                      type="button"
+                      class="promotion-poster-trigger is-center"
+                      data-poster-src="images/promotion/poster1.jpeg"
+                      data-poster-index="0"
+                      aria-label="View promotion poster 1"
+                    >
+                      <img
+                        src="images/promotion/poster1.jpeg"
+                        alt="Promotion Poster 1"
+                        class="promotion-poster"
+                      />
+                    </button>
+                    <button
+                      type="button"
+                      class="promotion-poster-trigger is-side"
+                      data-poster-src="images/promotion/poster2.jpeg"
+                      data-poster-index="1"
+                      aria-label="View promotion poster 2"
+                    >
+                      <img
+                        src="images/promotion/poster2.jpeg"
+                        alt="Promotion Poster 2"
+                        class="promotion-poster"
+                      />
+                    </button>
+                    <button
+                      type="button"
+                      class="promotion-poster-trigger is-side"
+                      data-poster-src="images/promotion/poster3.jpg"
+                      data-poster-index="2"
+                      aria-label="View promotion poster 3"
+                    >
+                      <img
+                        src="images/promotion/poster3.jpg"
+                        alt="Promotion Poster 3"
+                        class="promotion-poster"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- OUR TEAM SECTION -->
     <section
       id="ourteam"
@@ -1175,6 +1269,84 @@
         </div>
       </div>
     </section>
+
+    <!-- Promotion video modal -->
+    <div
+      class="promo-modal"
+      id="promoModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="promoModalTitle"
+      aria-hidden="true"
+      hidden
+    >
+      <div class="promo-modal-backdrop" id="promoModalBackdrop"></div>
+      <div class="promo-modal-center">
+        <div class="promo-modal-dialog">
+          <div class="promo-modal-media-wrap" id="promoModalMediaWrap">
+            <video
+              id="promoModalVideo"
+              class="promo-modal-video"
+              playsinline
+              controls
+              preload="metadata"
+            >
+              <source src="images/promotion/vidpromotion.mp4" type="video/mp4" />
+            </video>
+            <img
+              id="promoModalPoster"
+              class="promo-modal-poster-img"
+              alt=""
+              hidden
+            />
+          </div>
+          <div class="promo-modal-body">
+            <h2 id="promoModalTitle" class="visually-hidden">Exclusive Promotion</h2>
+            <p>Need support for an upcoming pitch or event project?</p>
+            <p>
+              Nebula X partners with event management companies to provide creative
+              content and event technology solutions that help bring ideas to life.
+            </p>
+            <p>
+              From proposal development, 3D event visualisation and animation to event
+              registration, AI experiences and interactive technologies, we help
+              strengthen both your pitch and project delivery.
+            </p>
+            <p>
+              Consider us your creative and event tech partner whenever you need
+              additional expertise, manpower or specialised solutions.
+            </p>
+            <p>Let&rsquo;s collaborate on your next project.</p>
+            <div class="promo-modal-footer">
+              <a
+                href="https://wa.me/60108064014"
+                class="promo-modal-contact"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contact Nebula X on WhatsApp"
+              >
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                +60 10 806 4014
+              </a>
+              <a
+                href="https://www.nebulax.my"
+                class="promo-modal-website"
+                target="_blank"
+                rel="noopener noreferrer"
+                >www.nebulax.my</a>
+            </div>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="promo-modal-close"
+          id="promoModalClose"
+          aria-label="Close promotion"
+        >
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
 
     <footer class="footer">
       <div class="container footer-wrap">
@@ -3180,6 +3352,199 @@
          12. Init
       -------------------------------------------------- */
         buildCarousel();
+      })();
+
+      /* Exclusive Promotion — video, posters + shared modal */
+      (function initPromotionModal() {
+        const previewVideo = document.getElementById("promotionPreviewVideo");
+        const playBtn = document.getElementById("promotionPlayBtn");
+        const modal = document.getElementById("promoModal");
+        const backdrop = document.getElementById("promoModalBackdrop");
+        const closeBtn = document.getElementById("promoModalClose");
+        const modalVideo = document.getElementById("promoModalVideo");
+        const modalPoster = document.getElementById("promoModalPoster");
+        const postersCarousel = document.getElementById("promotionPostersCarousel");
+
+        if (!modal || !modalVideo || !modalPoster) return;
+
+        if (previewVideo) {
+          previewVideo.pause();
+          previewVideo.currentTime = 0;
+        }
+
+        function showVideoMode() {
+          modal.classList.remove("is-poster-mode");
+          modalPoster.hidden = true;
+          modalVideo.hidden = false;
+          modalVideo.controls = true;
+        }
+
+        function showPosterMode(src, alt) {
+          modal.classList.add("is-poster-mode");
+          modalVideo.pause();
+          modalVideo.currentTime = 0;
+          modalVideo.hidden = true;
+          modalVideo.controls = false;
+          modalPoster.src = src;
+          modalPoster.alt = alt || "Promotion poster";
+          modalPoster.hidden = false;
+        }
+
+        function openVideoModal() {
+          showVideoMode();
+          modal.hidden = false;
+          modal.setAttribute("aria-hidden", "false");
+          modal.classList.add("is-open");
+          document.body.classList.add("promo-modal-open");
+          modalVideo.currentTime = 0;
+          modalVideo.muted = false;
+          const playPromise = modalVideo.play();
+          if (playPromise && typeof playPromise.catch === "function") {
+            playPromise.catch(() => {});
+          }
+        }
+
+        function openPosterModal(trigger) {
+          const src =
+            trigger.dataset.posterSrc ||
+            trigger.querySelector(".promotion-poster")?.src;
+          const alt = trigger.querySelector(".promotion-poster")?.alt || "";
+          if (!src) return;
+
+          showPosterMode(src, alt);
+          modal.hidden = false;
+          modal.setAttribute("aria-hidden", "false");
+          modal.classList.add("is-open");
+          document.body.classList.add("promo-modal-open");
+        }
+
+        function closeModal() {
+          modal.classList.remove("is-open", "is-poster-mode");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.classList.remove("promo-modal-open");
+          modalVideo.pause();
+          modalVideo.currentTime = 0;
+          modalVideo.hidden = false;
+          modalPoster.hidden = true;
+          modalPoster.removeAttribute("src");
+          window.setTimeout(() => {
+            if (!modal.classList.contains("is-open")) {
+              modal.hidden = true;
+            }
+          }, 350);
+        }
+
+        if (playBtn) {
+          playBtn.addEventListener("click", openVideoModal);
+        }
+
+        if (postersCarousel) {
+          postersCarousel.addEventListener("click", (e) => {
+            const trigger = e.target.closest(".promotion-poster-trigger");
+            if (trigger && postersCarousel.contains(trigger)) {
+              openPosterModal(trigger);
+            }
+          });
+        }
+
+        closeBtn.addEventListener("click", closeModal);
+        backdrop.addEventListener("click", closeModal);
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && modal.classList.contains("is-open")) {
+            closeModal();
+          }
+        });
+      })();
+
+      /* Promotion posters — auto carousel sederhana (1→2→3→1) */
+      (function initPromotionPosterCarousel() {
+        const carousel = document.getElementById("promotionPostersCarousel");
+        const track = document.getElementById("promotionPostersTrack");
+        if (!carousel || !track) return;
+
+        const viewport = carousel.querySelector(".promotion-posters-viewport");
+
+        function getItems() {
+          return Array.from(track.querySelectorAll(".promotion-poster-trigger")).sort(
+            (a, b) =>
+              parseInt(a.dataset.posterIndex, 10) -
+              parseInt(b.dataset.posterIndex, 10),
+          );
+        }
+
+        let items = getItems();
+        const total = items.length;
+        if (total < 2) return;
+
+        items.forEach((el) => track.appendChild(el));
+        items = getItems();
+
+        const TRANSITION =
+          "transform 0.55s cubic-bezier(0.4, 0, 0.2, 1)";
+        const AUTOPLAY_MS = 4000;
+
+        let activeIndex = 0;
+        let autoplayTimer = null;
+
+        function getGap() {
+          return (
+            parseFloat(
+              getComputedStyle(track).columnGap ||
+                getComputedStyle(track).gap,
+            ) || 0
+          );
+        }
+
+        function updateCarousel(animate) {
+          items.forEach((item, i) => {
+            item.classList.remove("is-center", "is-side");
+            if (i === activeIndex) {
+              item.classList.add("is-center");
+            } else {
+              item.classList.add("is-side");
+            }
+          });
+
+          const viewportWidth = viewport.offsetWidth;
+          const itemWidth = items[0].offsetWidth;
+          const gap = getGap();
+          const offset =
+            viewportWidth / 2 -
+            (activeIndex * (itemWidth + gap) + itemWidth / 2);
+
+          track.style.transition = animate ? TRANSITION : "none";
+          track.style.transform = `translateX(${offset}px)`;
+
+          if (!animate) {
+            track.offsetHeight;
+            track.style.transition = "";
+          }
+        }
+
+        function stepNext() {
+          activeIndex = (activeIndex + 1) % total;
+          updateCarousel(true);
+        }
+
+        function startAutoplay() {
+          stopAutoplay();
+          autoplayTimer = window.setInterval(stepNext, AUTOPLAY_MS);
+        }
+
+        function stopAutoplay() {
+          if (autoplayTimer) {
+            window.clearInterval(autoplayTimer);
+            autoplayTimer = null;
+          }
+        }
+
+        carousel.addEventListener("mouseenter", stopAutoplay);
+        carousel.addEventListener("mouseleave", startAutoplay);
+        window.addEventListener("resize", () => updateCarousel(false));
+
+        updateCarousel(false);
+        startAutoplay();
       })();
     </script>
   </body>
